@@ -1,0 +1,15 @@
+<div xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+	<c:url value="/users.html" var="usersThymeleaf" />
+	<c:url value="/images/eea-print-logo.gif" var="headerImage" />
+	<div class="header well">
+		<img src="${headerImage}"/>
+		<div class="page-header">
+			<h1>${title}</h1>
+		</div>	
+		<ul>
+			<li><a href="${usersThymeleaf}">List of users</a></li>
+		</ul>
+	</div>
+
+</div>

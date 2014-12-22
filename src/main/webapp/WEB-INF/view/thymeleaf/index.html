@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head th:include="thymeleaf/layout :: headerFragment">
+  </head>
+  <body>
+    <div class="container">
+      <div th:include="thymeleaf/layout :: bannerFragment">
+      </div>
+      <div id="workarea">
+        <h1>Frontpage</h1>
+      <ul>
+        <li><a href="users.html" th:href="@{/users.html}">List some users</a></li>
+      </ul>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam erat lectus, vehicula feugiat ultricies at, tempus sed ante. Cras arcu erat, lobortis vitae quam et, mollis pharetra odio. Nullam sit amet congue ipsum. Nunc dapibus odio ut ligula venenatis porta non id dui. Duis nec tempor tellus. Suspendisse id blandit ligula, sit amet varius mauris. Nulla eu eros pharetra, tristique dui quis, vehicula libero. Aenean a neque sit amet tellus porttitor rutrum nec at leo.
+</p>
+<p>
+Donec aliquet purus vitae euismod tincidunt. Nunc sit amet eleifend enim, ac vehicula velit. Sed quis tristique lectus. Donec ac scelerisque massa. Vestibulum quis nunc cursus, varius felis at, bibendum mi. Cras vel pretium diam. Donec egestas velit vitae ipsum viverra, imperdiet congue quam suscipit. Aenean commodo luctus dui. Sed at mi suscipit, porttitor nulla vitae, lobortis risus. Pellentesque malesuada turpis eu felis pretium commodo. Sed eu nunc et nibh aliquam dictum id at eros.
+</p>
+<p>
+Sed fermentum varius orci, eget facilisis mauris pretium id. Phasellus tempus mauris et convallis pellentesque. Ut id nunc turpis. Aliquam velit purus, finibus a mi non, elementum convallis turpis. Etiam orci quam, porttitor et ligula a, hendrerit lobortis nibh. Nullam rutrum urna ut nibh vulputate mollis. Aliquam nec erat vitae velit blandit ultrices. Nullam rutrum eleifend libero quis feugiat. Phasellus at lobortis eros, porta eleifend arcu. Mauris condimentum consectetur felis, pharetra egestas sem tincidunt et.
+</p>
+<p>
+Nam viverra risus justo, sed rutrum lacus posuere in. Morbi id ornare erat. Aliquam luctus bibendum ornare. Cras sit amet sem pretium, feugiat elit at, pellentesque nisl. Maecenas ultrices, urna quis eleifend porta, enim orci facilisis magna, sed elementum metus orci at nibh. Integer sagittis, nulla vulputate volutpat dictum, urna risus consequat lacus, vel varius ex quam vitae dui. Suspendisse auctor ipsum nec accumsan pharetra. Phasellus posuere est vel quam malesuada, et aliquam arcu aliquet. Curabitur iaculis lectus sed maximus tristique. Nam vitae aliquam turpis, nec hendrerit ante. Pellentesque in turpis ornare, sagittis nulla sed, dictum tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+</p>
+<p>
+Sed sit amet erat ultricies dui rhoncus vulputate. Mauris id porta risus. In maximus urna mauris, id ornare ante placerat in. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ullamcorper lacus et elit dictum, nec maximus justo dictum. Praesent vitae maximus orci. Maecenas sed facilisis erat. Proin commodo interdum posuere. Praesent vel purus id nisi fringilla malesuada vitae non dolor. Donec non volutpat magna. Quisque sagittis vel tortor a pretium. Phasellus posuere euismod convallis. Curabitur in nisi quis neque hendrerit maximus.
+</p>
+      </div>
+    </div>
+    <!-- container -->
+    <div id="pagefoot" th:include="thymeleaf/layout :: footerFragment">
+    Footer
+    </div>
+  </body>
+</html>

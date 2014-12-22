@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head th:fragment="headerFragment">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="http://www.eionet.europa.eu/styles/eionet2007/screen.css" media="screen"/>
+    <link th:href="@{/style/app.css}" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="container">
+      <div th:fragment="bannerFragment">
+        <div id="toolribbon">
+          <div id="lefttools">
+            <a id="skiplink" href="#workarea" accesskey="2">
+              <span>Skip to content</span>
+            </a>
+            <a id="eealink" href="http://www.eea.europa.eu/">EEA</a>
+          </div>
+          <div id="righttools">
+            <a id="loginlink" th:href="@{/loggedin}" href="#">Login</a>
+            <a id="printlink" title="Print this page" href="javascript:this.print();">
+              <span>Print</span>
+            </a>
+            <a id="fullscreenlink" href="javascript:toggleFullScreenMode()" title="Switch to/from full screen mode">
+              <span>Switch to/from full screen mode</span>
+            </a>
+            <a id="acronymlink" href="/acronyms" title="Look up acronyms">
+              <span>Acronyms</span>
+            </a>
+            <a id="rsslink" type="application/rss+xml" href="http://www.eionet.europa.eu/announcements.rdf" title="Eionet headlines as RSS">
+              <span>RSS</span>
+            </a>
+            <form action="http://www.google.com/cse" id="cse-search-box">
+              <div id="freesrchform">
+                <input name="cx" type="hidden" value="010617083146134556574:ymkqzb7sibw"/>
+                <input name="ie" type="hidden" value="UTF-8"/>
+                <input name="sa" type="hidden" value="Search"/>
+                <input id="freesrchfld" type="text" name="q" size="10" onfocus="if(this.value=='Search Eionet')this.value='';" onblur="if(this.value=='')this.value='Search Eionet';" title="Search Eionet" value="Search Eionet"/>
+                <input id="freesrchbtn" type="image" src="http://www.eionet.europa.eu/styles/eionet2007/button_go.gif" alt="Go"/>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- toolribbon -->
+        <div id="pagehead">
+          <a title="Frontpage" th:href="@{/}" href="#">
+            <img th:src="@{/images/eea-print-logo.gif}" alt="Logo" id="logo" width="428" height="87"/>
+          </a>
+          <div id="networktitle">Eionet</div>
+          <div id="sitetitle">European Environment Information and Observation Network</div>
+          <div id="sitetagline">Networking improving Europe's environment</div>
+        </div>
+        <div id="menuribbon">
+          <!-- Last updated: 2014-10-22T07:11:32Z
+     To update download http://www.eionet.europa.eu/dropdownmenus.txt -->
+          <ul id="dropdowns">
+            <li>
+              <a href="http://www.eionet.europa.eu/menuservices">Services</a>
+              <ul>
+                <li>
+                  <a href="http://www.eionet.europa.eu/helpdesk">Helpdesk</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="http://www.eionet.europa.eu/menureportnet">Reportnet</a>
+              <ul>
+                <li>
+                  <a href="http://cdr.eionet.europa.eu/">CDR Repository</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="breadcrumbtrail">
+          <div class="breadcrumbhead">You are here:</div>
+          <div class="breadcrumbitem eionetaccronym">
+            <a href="http://www.eionet.europa.eu">Eionet</a>
+          </div>
+          <div class="breadcrumbitemlast">SEIS</div>
+          <div class="breadcrumbtail"/>
+        </div>
+        <div id="leftcolumn">
+          <div class="localnav" th:fragment="menuFragment">
+            <h2>Local navigation</h2>
+            <ul>
+              <li>
+                <a href="/helpdesk/" title="Eionet Helpdesk">Helpdesk</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="workarea">
+        <h1 th:text="${title}">Page title here</h1>
+      </div>
+      <!-- workarea -->
+    </div>
+    <!-- container -->
+    <div id="pagefoot" th:fragment="footerFragment">
+      <p>
+Document last modified
+2009/04/03.
+</p>
+      <p><a href="/disclaimer">Disclaimer</a>.
+Copyright: <a rel="license" href="http://creativecommons.org/licenses/by/2.5/dk/deed.en_GB" title="Creative Commons Attribution License"><img alt="Creative Commons Attribution License" src="http://i.creativecommons.org/l/by/2.5/dk/80x15.png"/></a>
+</p>
+    </div>
+  </body>
+</html>

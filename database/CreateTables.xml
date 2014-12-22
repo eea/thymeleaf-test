@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+  <!--
+     You can run this change log on your database as many times as you want, it will ignore the
+     changes that are already applied. It also means that you can't modify an existing revision.
+     Always add to the end.
+
+     Use the maven goals: liquibase:update and liquibase:status
+      Potentially with -Dliquibase.dropFirst=true
+ -->
+
+  <changeSet author="roug" id="rev-1">
+    <createTable tableName="WASTETRANSFER">
+      <column name="WasteTransferID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="FacilityReportID" type="INT"/>
+      <column name="LOV_WasteTypeID" type="INT"/>
+      <column name="LOV_WasteTreatmentID" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="LOV_MethodBasisID" type="INT"/>
+      <column name="MethodListID" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="Quantity" type="float">
+        <constraints nullable="true"/>
+      </column>
+      <column name="LOV_QuantityUnitID" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="WasteHandlerPartyID" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="ConfidentialIndicator" type="BOOLEAN"/>
+      <column name="LOV_ConfidentialityID" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="RemarkText" type="TEXT">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-2">
+    <createTable tableName="WASTEHANDLERPARTY">
+      <column name="WasteHandlerPartyID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="Name" type="VARCHAR(255)">
+        <constraints nullable="true"/>
+      </column>
+      <column name="AddressID" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="SiteAddressID" type="INT">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-3">
+    <createTable tableName="PRODUCTIONVOLUME">
+      <column name="ProductionVolumeID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="ProductName" type="VARCHAR(255)"/>
+      <column name="Quantity" type="float"/>
+      <column name="LOV_UnitID" type="INT"/>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-4">
+    <createTable tableName="POLLUTANTTRANSFER">
+      <column name="PollutantTransferID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="FacilityReportID" type="INT"/>
+      <column name="LOV_PollutantID" type="INT"/>
+      <column name="LOV_MethodBasisID" type="INT"/>
+      <column name="MethodListID" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="Quantity" type="float"/>
+      <column name="LOV_QuantityUnitID" type="INT"/>
+      <column name="ConfidentialIndicator" type="BOOLEAN"/>
+      <column name="LOV_ConfidentialityID" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="RemarkText" type="TEXT">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-5">
+    <createTable tableName="POLLUTANTRELEASEANDTRANSFERREPORT">
+      <column name="PollutantReleaseAndTransferReportID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="ReportingYear" type="INT"/>
+      <column name="LOV_CountryID" type="INT"/>
+      <column name="LOV_CoordinateSystemID" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="RemarkText" type="TEXT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="CdrUrl" type="VARCHAR(255)"/>
+      <column name="CdrUploaded" type="DATETIME"/>
+      <column name="CdrReleased" type="DATETIME"/>
+      <column name="ForReview" type="DATETIME">
+        <constraints nullable="true"/>
+      </column>
+      <column name="Published" type="DATETIME">
+        <constraints nullable="true"/>
+      </column>
+      <column name="ResubmitReason" type="TEXT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="LOV_StatusID" type="INT">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-6">
+    <createTable tableName="POLLUTANTRELEASE">
+      <column name="PollutantReleaseID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="FacilityReportID" type="INT"/>
+      <column name="LOV_MediumID" type="INT"/>
+      <column name="LOV_PollutantID" type="INT"/>
+      <column name="LOV_MethodBasisID" type="INT"/>
+      <column name="MethodListID" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="TotalQuantity" type="float"/>
+      <column name="LOV_TotalQuantityUnitID" type="INT"/>
+      <column name="AccidentalQuantity" type="float"/>
+      <column name="LOV_AccidentalQuantityUnitID" type="INT"/>
+      <column name="ConfidentialIndicator" type="BOOLEAN"/>
+      <column name="LOV_ConfidentialityID" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="RemarkText" type="TEXT">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-7">
+    <createTable tableName="METHODUSED">
+      <column name="MethodUsedID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="MethodListID" type="INT"/>
+      <column name="LOV_MethodTypeID" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="MethodDesignation" type="VARCHAR(255)">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-8">
+    <createTable tableName="METHODLIST">
+      <column name="MethodListID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-9">
+    <createTable tableName="LOV_WASTETYPE">
+      <column name="LOV_WasteTypeID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="Code" type="VARCHAR(255)">
+        <constraints unique="true"/>
+      </column>
+      <column name="Name" type="VARCHAR(255)">
+        <constraints nullable="true"/>
+      </column>
+      <column name="StartYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="EndYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="ParentID" type="INT">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-10">
+    <createTable tableName="LOV_WASTETREATMENT">
+      <column name="LOV_WasteTreatmentID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="Code" type="VARCHAR(255)">
+        <constraints unique="true"/>
+      </column>
+      <column name="Name" type="VARCHAR(255)"/>
+      <column name="StartYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="EndYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-11">
+    <createTable tableName="LOV_WASTETHRESHOLD">
+      <column name="LOV_WasteThresholdID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="LOV_WasteTypeID" type="INT"/>
+      <column name="Threshold" type="float"/>
+      <column name="StartYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="EndYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-12">
+    <createTable tableName="LOV_UNIT">
+      <column name="LOV_UnitID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="Code" type="VARCHAR(255)">
+        <constraints unique="true"/>
+      </column>
+      <column name="Name" type="VARCHAR(255)"/>
+      <column name="StartYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="EndYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-13">
+    <createTable tableName="LOV_RIVERBASINDISTRICT">
+      <column name="LOV_RiverBasinDistrictID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="Code" type="VARCHAR(255)">
+        <constraints unique="true"/>
+      </column>
+      <column name="Name" type="VARCHAR(255)"/>
+      <column name="StartYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="EndYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="LOV_CountryID" type="INT">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-14">
+    <createTable tableName="LOV_POLLUTANTTHRESHOLD">
+      <column name="LOV_PollutantThresholdID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="LOV_PollutantID" type="INT"/>
+      <column name="LOV_MediumID" type="INT"/>
+      <column name="Threshold" type="float"/>
+      <column name="StartYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="EndYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-15">
+    <createTable tableName="LOV_POLLUTANT">
+      <column name="LOV_PollutantID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="Code" type="VARCHAR(255)">
+        <constraints unique="true"/>
+      </column>
+      <column name="Name" type="VARCHAR(255)"/>
+      <column name="StartYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="EndYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="ParentID" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="CAS" type="VARCHAR(20)">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-16">
+    <createTable tableName="LOV_NUTSREGION">
+      <column name="LOV_NUTSRegionID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="Code" type="VARCHAR(255)">
+        <constraints unique="true"/>
+      </column>
+      <column name="Name" type="VARCHAR(255)"/>
+      <column name="StartYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="EndYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="ParentID" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="LOV_CountryID" type="INT"/>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-17">
+    <createTable tableName="LOV_NACEACTIVITY">
+      <column name="LOV_NACEActivityID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="Code" type="VARCHAR(255)">
+        <constraints unique="true"/>
+      </column>
+      <column name="Name" type="VARCHAR(255)"/>
+      <column name="StartYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="EndYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="ParentID" type="INT">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-18">
+    <createTable tableName="LOV_METHODTYPE">
+      <column name="LOV_MethodTypeID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="Code" type="VARCHAR(255)">
+        <constraints unique="true"/>
+      </column>
+      <column name="Name" type="VARCHAR(255)"/>
+      <column name="StartYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="EndYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-19">
+    <createTable tableName="LOV_METHODBASIS">
+      <column name="LOV_MethodBasisID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="Code" type="VARCHAR(255)">
+        <constraints unique="true"/>
+      </column>
+      <column name="Name" type="VARCHAR(255)"/>
+      <column name="StartYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="EndYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-20">
+    <createTable tableName="LOV_MEDIUM">
+      <column name="LOV_MediumID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="Code" type="VARCHAR(255)">
+        <constraints unique="true"/>
+      </column>
+      <column name="Name" type="VARCHAR(255)"/>
+      <column name="StartYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="EndYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-21">
+    <createTable tableName="LOV_COUNTRYAREAGROUP">
+      <column name="LOV_AreaGroupID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="LOV_CountryID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-22">
+    <createTable tableName="LOV_COUNTRY">
+      <column name="LOV_CountryID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="Code" type="VARCHAR(255)">
+        <constraints unique="true"/>
+      </column>
+      <column name="Name" type="VARCHAR(255)"/>
+      <column name="StartYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="EndYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-23">
+    <createTable tableName="LOV_COORDINATESYSTEM">
+      <column name="LOV_CoordinateSystemID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="Code" type="VARCHAR(255)">
+        <constraints unique="true"/>
+      </column>
+      <column name="Name" type="VARCHAR(255)"/>
+      <column name="StartYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="EndYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-24">
+    <createTable tableName="LOV_CONFIDENTIALITY">
+      <column name="LOV_ConfidentialityID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="Code" type="VARCHAR(255)">
+        <constraints unique="true"/>
+      </column>
+      <column name="Name" type="VARCHAR(255)"/>
+      <column name="StartYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="EndYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-25">
+    <createTable tableName="LOV_AREAGROUP">
+      <column name="LOV_AreaGroupID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="Code" type="VARCHAR(255)">
+        <constraints unique="true"/>
+      </column>
+      <column name="Name" type="VARCHAR(255)"/>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-26">
+    <createTable tableName="LOV_ANNEXIACTIVITY">
+      <column name="LOV_AnnexIActivityID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="Code" type="VARCHAR(255)">
+        <constraints unique="true"/>
+      </column>
+      <column name="Name" type="VARCHAR(255)"/>
+      <column name="StartYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="EndYear" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="ParentID" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="IPPCCode" type="VARCHAR(255)">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-27">
+    <createTable tableName="FACILITYREPORT">
+      <column name="FacilityReportID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="PollutantReleaseAndTransferReportID" type="INT"/>
+      <column name="FacilityID" type="INT"/>
+      <column name="NationalID" type="VARCHAR(255)"/>
+      <column name="ParentCompanyName" type="VARCHAR(255)">
+        <constraints nullable="true"/>
+      </column>
+      <column name="FacilityName" type="VARCHAR(255)">
+        <constraints nullable="true"/>
+      </column>
+      <column name="AddressID" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="GeographicalCoordinate" type="${geometry.type}"/>
+      <column name="LOV_StatusID" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="LOV_RiverBasinDistrictID" type="INT"/>
+      <column name="LOV_RiverBasinDistrictID_Source" type="INT"/>
+      <column name="LOV_NACEMainEconomicActivityID" type="INT"/>
+      <column name="MainEconomicActivityName" type="VARCHAR(255)"/>
+      <column name="CompetentAuthorityPartyID" type="INT"/>
+      <column name="ProductionVolumeID" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="TotalIPPCInstallationQuantity" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="OperatingHours" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="TotalEmployeeQuantity" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="LOV_NUTSRegionID" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="LOV_NUTSRegionID_Source" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="WebsiteCommunication" type="VARCHAR(255)">
+        <constraints nullable="true"/>
+      </column>
+      <column name="PublicInformation" type="VARCHAR(255)">
+        <constraints nullable="true"/>
+      </column>
+      <column name="ConfidentialIndicator" type="BOOLEAN"/>
+      <column name="LOV_ConfidentialityID" type="INT">
+        <constraints nullable="true"/>
+      </column>
+      <column name="ProtectVoluntaryData" type="BOOLEAN"/>
+      <column name="RemarkText" type="TEXT">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-28">
+    <createTable tableName="FACILITYLOG">
+      <column name="FacilityLogID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="FacilityReportID" type="INT"/>
+      <column name="FacilityID" type="INT"/>
+      <column name="NationalID" type="VARCHAR(255)"/>
+      <column name="ReportingYear" type="INT"/>
+      <column name="Published" type="DATETIME">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-29">
+    <createTable tableName="FACILITY">
+      <column name="FacilityID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-30">
+    <createTable tableName="COMPETENTAUTHORITYPARTY">
+      <column name="CompetentAuthorityPartyID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="LOV_CountryID" type="INT"/>
+      <column name="ReportingYear" type="INT"/>
+      <column name="Name" type="VARCHAR(255)"/>
+      <column name="AddressID" type="INT"/>
+      <column name="TelephoneCommunication" type="VARCHAR(50)"/>
+      <column name="FaxCommunication" type="VARCHAR(50)"/>
+      <column name="EmailCommunication" type="VARCHAR(255)"/>
+      <column name="ContactPersonName" type="VARCHAR(255)">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-31">
+    <createTable tableName="ADDRESS">
+      <column name="AddressID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="StreetName" type="VARCHAR(255)">
+        <constraints nullable="true"/>
+      </column>
+      <column name="BuildingNumber" type="VARCHAR(255)">
+        <constraints nullable="true"/>
+      </column>
+      <column name="City" type="VARCHAR(255)">
+        <constraints nullable="true"/>
+      </column>
+      <column name="PostalCode" type="VARCHAR(50)">
+        <constraints nullable="true"/>
+      </column>
+      <column name="LOV_CountryID" type="INT">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-32">
+    <createTable tableName="ACTIVITY">
+      <column name="ActivityID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="FacilityReportID" type="INT"/>
+      <column name="RankingNumeric" type="INT"/>
+      <column name="LOV_AnnexIActivityID" type="INT"/>
+      <column name="MainActivityIndicator" type="BOOLEAN"/>
+    </createTable>
+    <sql dbms="mssql">ALTER TABLE ACTIVITY CHANGE MainActivityIndicator AS CAST(CASE WHEN RankingNumeric = 1 THEN 1 ELSE 0 END AS bit) PERSISTED NOT NULL</sql>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-33">
+    <createTable tableName="LOV_STATUS">
+      <column name="LOV_StatusID" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="TableName" type="VARCHAR(255)"/>
+      <column name="Code" type="VARCHAR(255)">
+        <constraints unique="true"/>
+      </column>
+      <column name="Description" type="VARCHAR(255)">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+</databaseChangeLog>
