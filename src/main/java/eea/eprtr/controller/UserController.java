@@ -26,7 +26,7 @@ public class UserController {
     @RequestMapping(value="/users", method=RequestMethod.GET)
     public String findUsersThymeLeaf(Model model){
         buildUserList(model);
-        model.addAttribute("title", "Users List - Thymeleaf");
+        model.addAttribute("title", "Users List");
         return "thymeleaf/users";
     }
 
