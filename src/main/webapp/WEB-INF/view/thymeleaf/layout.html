@@ -6,7 +6,7 @@
     <link th:href="@{/style/app.css}" rel="stylesheet"/>
   </head>
   <body>
-    <div class="container">
+    <div id="container">
       <div th:fragment="bannerFragment">
         <div id="toolribbon">
           <div id="lefttools">
@@ -76,22 +76,31 @@
           <div class="breadcrumbitem eionetaccronym">
             <a href="http://www.eionet.europa.eu">Eionet</a>
           </div>
-          <div class="breadcrumbitemlast">SEIS</div>
+          <div class="breadcrumbitemlast">E-PRTR</div>
           <div class="breadcrumbtail"/>
         </div>
         <div id="leftcolumn">
           <div class="localnav" th:fragment="menuFragment">
             <h2>Local navigation</h2>
             <ul>
-              <li>
-                <a href="/helpdesk/" title="Eionet Helpdesk">Helpdesk</a>
-              </li>
+              <li><a href="index.html" th:href="@{/index.html}">Home</a></li>
+              <li><a href="about.html" th:href="@{/about.html}">About E-PRTR</a></li>
+              <li><a href="users.html" th:href="@{/users.html}">List users</a></li>
             </ul>
           </div>
         </div>
       </div>
       <div id="workarea">
         <h1 th:text="${title}">Page title here</h1>
+        <p>
+Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.
+        </p>
+        <p>
+Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.
+        </p>
+        <p>
+Completely synergize resource sucking relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.
+        </p>
       </div>
       <!-- workarea -->
     </div>

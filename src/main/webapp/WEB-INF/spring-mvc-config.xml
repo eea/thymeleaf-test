@@ -8,6 +8,7 @@
 	
 
         <mvc:resources location="/images/" mapping="/images/**"/>
+        <mvc:resources location="/style/" mapping="/style/**"/>
 
 	<!-- Scans the classpath of this application for @Components to deploy as beans -->
 	<context:component-scan base-package="eea.eprtr.controller" />
@@ -15,6 +16,33 @@
 	<!-- Configures the @Controller programming model -->
 	<mvc:annotation-driven />
 	
+	<bean id="templateResolver"
+		class="org.thymeleaf.templateresolver.ServletContextTemplateResolver">
+		<property name="prefix" value="/WEB-INF/view/" />
+		<property name="suffix" value=".html" />
+		<property name="templateMode" value="HTML5" />
+		<property name="cacheable" value="true" />
+	</bean>
+
+	<bean id="templateEngine" class="org.thymeleaf.spring3.SpringTemplateEngine">
+		<property name="templateResolver" ref="templateResolver" />
+                <!--
+                <property name="additionalDialects">
+                    <set>
+                        <bean class="org.thymeleaf.presentation.dialect.PresentationDialect"/>
+                        <bean class="eionet.thymeleaf.LayoutDialect"/>
+                    </set>
+                </property>
+                -->
+	</bean>
+
+	<bean class="org.thymeleaf.spring3.view.ThymeleafViewResolver">
+		<property name="templateEngine" ref="templateEngine" />
+                <!-- -->
+		<property name="order" value="1" />
+		<property name="viewNames" value="thymeleaf/*" />
+	</bean>
+
 	<!-- Resolves view names to protected .jsp resources within the /WEB-INF/views directory -->
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
 		<property name="prefix" value="/WEB-INF/view/jsp/"/>

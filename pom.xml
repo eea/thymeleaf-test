@@ -46,7 +46,7 @@
         </repository>
         <repository>
             <id>eea</id>
-            <name>EAA Release Repository</name>
+            <name>EEA Release Repository</name>
             <url>http://archiva.eionet.europa.eu/repository/internal</url>
             <snapshots>
                 <enabled>false</enabled>
@@ -212,13 +212,6 @@
                 </executions>
             </plugin>
 -->
-            <!-- FindBugs Static Analysis
-                 Find Security Bugs: https://github.com/h3xstream/find-sec-bugs/wiki/Maven-configuration
-                 To only find security bugs, add these filters
-                 <includeFilterFile>${session.executionRootDirectory}/doc/findbugs-security-include.xml</includeFilterFile>
-                 <excludeFilterFile>${session.executionRootDirectory}/doc/findbugs-security-exclude.xml</excludeFilterFile>
-
-             -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>findbugs-maven-plugin</artifactId>
@@ -227,15 +220,6 @@
                     <!-- <effort>Max</effort> -->
                     <threshold>Medium</threshold>
                     <failOnError>true</failOnError>
-                    <!--
-                    <plugins>
-                        <plugin>
-                            <groupId>com.h3xstream.findsecbugs</groupId>
-                            <artifactId>findsecbugs-plugin</artifactId>
-                            <version>1.2.0</version>
-                        </plugin>
-                    </plugins>
-                    -->
                 </configuration>
             </plugin>
         </plugins>
