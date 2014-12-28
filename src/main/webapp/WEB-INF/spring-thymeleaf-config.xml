@@ -15,9 +15,19 @@
 	</bean>
 	<bean id="templateEngine" class="org.thymeleaf.spring3.SpringTemplateEngine">
 		<property name="templateResolver" ref="templateResolver" />
+                <!--
+                <property name="additionalDialects">
+                    <set>
+                        <bean class="org.thymeleaf.presentation.dialect.PresentationDialect"/>
+                        <bean class="eionet.thymeleaf.LayoutDialect"/>
+                    </set>
+                </property>
+                -->
 	</bean>
+
 	<bean class="org.thymeleaf.spring3.view.ThymeleafViewResolver">
 		<property name="templateEngine" ref="templateEngine" />
+                <!-- -->
 		<property name="order" value="1" />
 		<property name="viewNames" value="thymeleaf/*" />
 	</bean>
