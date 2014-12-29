@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head th:include="thymeleaf/layout :: headerFragment">
+  </head>
+  <body>
+    <div id="container">
+      <div th:include="thymeleaf/layout :: bannerFragment">
+      </div>
+      <div id="workarea">
+        <h1 th:text="${title}">Page title here</h1>
+        <div th:if="${#lists.isEmpty(facilities)}">Table is empty.</div>
+        <div th:if="${not #lists.isEmpty(facilities)}">
+          <table>
+            <thead>
+              <tr>
+                <th> Code </th>
+                <th> Facility name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr th:each="facilities : ${facilities}">
+                <td><a href="#" th:href="@{'/facilities/' + ${facilities.code} + '.html'}" th:text="${facilities.code}">99999</a></td>
+                <td th:text="${facilities.name}">Long realistic company name</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- workarea -->
+    </div>
+    <!-- container -->
+    <div id="pagefoot" th:include="thymeleaf/layout :: footerFragment">
+    Footer
+    </div>
+  </body>
+</html>
