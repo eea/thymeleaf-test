@@ -15,7 +15,10 @@
         <tiles.version>3.0.1</tiles.version>
         <thymeleaf.version>2.0.15</thymeleaf.version>
         <checkstyle.config.location>${basedir}/doc/checkstyle.xml</checkstyle.config.location>
+        <!--
         <liquibase.changeLogFile>database/changelog-master.xml</liquibase.changeLogFile>
+        -->
+        <liquibase.changeLogFile>database/CMS.xml</liquibase.changeLogFile>
     </properties>
 
     <version>2.0-SNAPSHOT</version>
@@ -149,7 +152,7 @@
 
 
             <!-- Update database tables -->
-            <!--
+
             <plugin>
                 <groupId>org.liquibase</groupId>
                 <artifactId>liquibase-maven-plugin</artifactId>
@@ -165,6 +168,7 @@
                         <configuration>
                             <skip>${maven.test.skip}</skip>
                             <propertyFile>target/test-classes/liquibase.properties</propertyFile>
+                            <!-- <promptOnNonLocalDatabase>false</promptOnNonLocalDatabase> -->
                         </configuration>
                         <goals>
                             <goal>dropAll</goal>
@@ -173,7 +177,7 @@
                     </execution>
                 </executions>
             </plugin>
-            -->
+
 
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -362,11 +366,19 @@
         </dependency>
 
         <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.3.172</version>
+        </dependency>
+
+        <!--
+        <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.31</version>
             <scope>compile</scope>
         </dependency>
+        -->
         <dependency>
             <groupId>commons-lang</groupId>
             <artifactId>commons-lang</artifactId>
@@ -412,15 +424,9 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.easymock</groupId>
-            <artifactId>easymock</artifactId>
-            <version>3.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <version>1.3.171</version>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
             <scope>test</scope>
         </dependency>
 

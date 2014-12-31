@@ -15,12 +15,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 
 @Controller
-public class HomeController {
+public class SimpleDocController {
 
     /**
      * Frontpage.
      */
-    @RequestMapping(value = "/index", method = RequestMethod.GET)
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(Model model) {
         loadFromDB("/index", model);
         return "thymeleaf/simplecontent";
@@ -38,7 +38,7 @@ public class HomeController {
     private void loadFromDB(String name, Model model) {
         Properties props = new Properties();
         try {
-            InputStream inStream = HomeController.class.getResourceAsStream(name + ".properties");
+            InputStream inStream = SimpleDocController.class.getResourceAsStream(name + ".properties");
             props.load(inStream);
             inStream.close();
             for (String key : props.stringPropertyNames()) {

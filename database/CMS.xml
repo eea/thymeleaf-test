@@ -10,12 +10,23 @@
      Use the maven goals: liquibase:update and liquibase:status
       Potentially with -Dliquibase.dropFirst=true
  -->
- <property name="geometry.type" value="TEXT" dbms="h2,mysql"/>
- <property name="geometry.type" value="GEOMETRY" dbms="mssql"/>
 
+  <changeSet author="roug" id="rev-1">
+    <createTable tableName="PAGES">
+      <column name="name" type="varchar(16)">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="title" type="varchar(256)"/>
+      <column name="content" type="text"/>
+    </createTable>
+  </changeSet>
 
- <!--
- <include file="database/CreateTables.xml"/>
- -->
- <include file="database/CMS.xml"/>
+  <changeSet author="roug" id="rev-2">
+    <insert tableName="PAGES">
+      <column name="name" value="index"/>
+      <column name="title" value="Welcome to E-PRTR"/>
+      <column name="content" valueClobFile="index.content" encoding="UTF-8"/>
+    </insert>
+  </changeSet>
+
 </databaseChangeLog>
