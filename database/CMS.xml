@@ -27,6 +27,16 @@
       <column name="title" value="Welcome to E-PRTR"/>
       <column name="content" valueClobFile="index.content" encoding="UTF-8"/>
     </insert>
+    <insert tableName="PAGES">
+      <column name="name" value="about"/>
+      <column name="title" value="About E-PRTR"/>
+      <column name="content" valueClobFile="about.content" encoding="UTF-8"/>
+    </insert>
+    <insert tableName="PAGES">
+      <column name="name" value="faq"/>
+      <column name="title" value="Frequently Asked Questions"/>
+      <column name="content" valueClobFile="faq.content" encoding="UTF-8"/>
+    </insert>
   </changeSet>
 
 </databaseChangeLog>

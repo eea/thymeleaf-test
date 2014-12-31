@@ -1,0 +1,337 @@
+<p>Clicking on <em>each question </em>you will find information on the nature of the E-PRTR Data and the key functionalities of the website.</p>
+<ol>
+<li><a href="#Q1">Why E-PRTR?</a></li>
+<li><a href="#Q2">What information can be found on E-PRTR?</a></li>
+<li><a href="#Q3">Who benefits from E-PRTR?</a></li>
+<li><a href="#Q4">Which industrial facilities and pollutants are included in the E-PRTR?</a></li>
+<li><a href="#Q5">What share of total EU emission releases does the E-PRTR cover?</a></li>
+<li><a href="#Q6">Are E-PRTR data complete and comparable?</a></li>
+<li><a href="#Q7">What are the main differences between EPER and E-PRTR</a></li>
+<li><a href="#Q8">Can E-PRTR and EPER data be compared?</a></li>
+<li><a href="#Q9">What are the links and the main differences between the European PRTR  and the PRTR Protocol?</a></li>
+<li><a href="#Q10">How has the quality of E-PRTR data been checked?</a></li>
+<li><a href="#Q11">How do I know whether the reported releases are dangerous?</a></li>
+<li><a href="#Q12">Is any information kept confidential?</a></li>
+<li><a href="#Q13">Which facilities are shown on the maps?</a></li>
+<li><a href="#Q14">The general information delivered by the facilities sometimes varies. Why is this?</a></li>
+<li><a href="#Q15">What are the interactions between the E-PRTR register and the IPPC Directive?</a></li>
+<li><a href="#Q16">What are the interactions between the E-PRTR register and the Emission Trading Scheme Directive?</a></li>
+<li><a href="#Q17">Which methodologies are used for reporting data under E-PRTR?</a></li>
+<li><a href="#Q18">How are the E-PRTR searches organised?</a> 
+<ul>
+<li>The "facility level" option</li>
+<li>The "industrial activity" option</li>
+<li>The "pollutant releases" option</li>
+<li>The "pollutant transfers" option</li>
+<li>The "waste transfer" option</li>
+<li>The "map search" option</li>
+</ul>
+</li>
+<li><a href="#q19">Supported browsers for the use of the website</a></li>
+</ol>
+<h2 id="Q1">1. Why E-PRTR?</h2>
+<p>The Rio Declaration in 1992 gave impetus to the idea of setting up emission inventories as tools for providing information on pollutants to the public. In the EU, this idea was first given concrete form in 1996 through the Directive concerning <a href="http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2008:024:0008:0029:en:PDF">Integrated Pollution Prevention and Control (IPPC)</a> and in 2000 with the adoption of the <a href="http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:32000D0479:EN:HTML">Commission Decision on the European Pollutant Emission Register (EPER).</a></p>
+<p>In 1998 the <a href="http://www.unece.org/env/pp/introduction.html">UNECE Convention on Access to Information, Public Participation in Decision-making and Access to Justice in Environmental Matters</a>, known as Aarhus Convention, entered into force granting the public rights to access environmental information. Under the convention, a specific <a href="http://www.unece.org/env/pp/prtr.htm">Protocol on Pollutant Release and Transfer Registers (PRTR)</a><strong> </strong>was adopted at an extraordinary meeting of the Parties to the Aarhus Convention on 21 May 2003 and entered into force in October 2009.</p>
+<p>The aim of all these instruments was to develop tools which <strong>ensure a real participation of citizens in environmental matters </strong>by enhancing public access to environmental information.</p>
+<p>In order for the European Community to implement the <a href="http://www.unece.org/env/pp/prtr.htm">PRTR Protocol</a>, the European Pollutant Release and Transfer Register (E-PRTR) was established through <a href="http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2006:033:0001:0017:EN:PDF">Regulation (EC) No 166/2006. E-PRTR</a> that replaces the previous European Pollutant Emission Register (EPER).</p>
+<h2 id="Q2">2. What information can be found on E-PRTR?</h2>
+<p>E-PRTR contains data on the main pollutant releases to air, water and land of about 28,000 industrial facilities across the European Union and EFTA countries. It also contains data on off-site transfers of waste water and waste from these facilities.</p>
+<p>The first report issued in 2009 corresponds to emission data from 2007. The second report in 2010 covers 2008 data, and data will continue to be updated on an annual basis with each report covering emission from two years previous.</p>
+<p>These data represent the total annual emission releases during normal operations and accidents. Releases and transfers must be reported only if the emissions of a facility are above the activity and pollutant thresholds set out in the <a href="http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2006:033:0001:0017:EN:PDF">E-PRTR Regulation</a>.</p>
+<p>The total annual quantities are indicated for releases and transfers as well as accidental releases, if any.</p>
+<p>The E-PRTR also contains information gathered under the previous emission register EPER for the reporting years 2001 and 2004 (the EPER reporting cycle was once every three years).</p>
+<p>In the E-PRTR register users will also find information on a number of releases from diffuse sources available as map layers.</p>
+<h2 id="Q3">3. Who benefits from E-PRTR?</h2>
+<p>Everyone benefits from the register.</p>
+<p>Users are given access to information on releases and transfers from industrial facilities in their neighbourhood or country, which can be compared with other facilities all over Europe. Access is also given to the trends over the years.</p>
+<p>Such access to data provides European citizens with important information on environmental and health protection, and promotes actions to reduce these environmental impacts. The register gives companies the opportunity to provide information to the public and show that they are environmentally pro-active while monitoring the pollution records of their sector.</p>
+<p>E-PRTR also aims to provide governments, competent authorities, policymakers and scientists with a coherent and Europe-wide industrial release and transfers database.</p>
+<h2 id="Q4">4. Which industrial facilities and pollutants are included in the E-PRTR?</h2>
+<p>The register contains data reported by some <em>28 000 industrial facilities </em>covering <em>65 economic activities</em> within the following <em>9 industrial sectors</em>:</p>
+<ul>
+<li>energy </li>
+<li>production and processing of metals </li>
+<li>mineral industry </li>
+<li>chemical industry </li>
+<li>waste and waste water management </li>
+<li>paper and wood production and processing </li>
+<li>intensive livestock production and aquaculture </li>
+<li>animal and vegetable products from the food and beverage sector, and </li>
+<li>other activities. </li>
+</ul>
+<p>Data is provided in the register for <em>91 pollutants</em> falling under the following 7 groups:</p>
+<ul>
+<li>Greenhouse gases </li>
+<li>Other gases </li>
+<li>Heavy metals </li>
+<li>Pesticides </li>
+<li>Chlorinated organic substances </li>
+<li>Other organic substances </li>
+<li>Inorganic substances.</li>
+</ul>
+<p>A facility has to report data under E-PRTR if it fulfils the following <em>criteria</em>:</p>
+<ul>
+<li>the facility falls under at least one of the <a href="http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2006:033:0001:0017:EN:PDF#page=8">65 E-PRTR economic activities</a>. The activities are also reported using a statistical classification of economic activities (<a href="http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2006:393:0001:0039:EN:PDF">NACE rev 2</a>) </li>
+<li>the facility has a capacity exceeding at least one of the <a href="http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2006:033:0001:0017:EN:PDF#page=8">E-PRTR capacity thresholds</a> </li>
+<li>the facility releases pollutants or transfers waste off-site which exceed specific thresholds set out in <a href="http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2006:033:0001:0017:EN:PDF#page=4">Article 5</a> of the E-PRTR Regulation. These thresholds for releases of pollutants are specified for each media - air, water and land - in <a href="http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2006:033:0001:0017:EN:PDF#page=12">Annex II</a> of the E-PRTR Regulation.</li>
+</ul>
+<p>The <em>data to be reported annually by each facility</em> for which the applicable thresholds are exceeded are the following:</p>
+<ul>
+<li>Releases to air, water and land of any of the 91 E-PRTR pollutants ;</li>
+<li>Off-site transfers of any of the 91 E-PRTR pollutants in waste water destined for waste-water treatment outside the facility; </li>
+<li>Off-site transfers of waste (reported as tonnes per year) for recovery or disposal. For transboundary movements of hazardous waste outside the reporting country, details of the recipients have to be provided.</li>
+</ul>
+<p>The reported releases include any introduction of any of the listed pollutants into the environment as a result of any human activity, whether deliberate, accidental, routine or non-routine, at the site of the facility.</p>
+<p>E-PRTR also contains information on releases from diffuse sources into water which will be upgraded and extended gradually.</p>
+<h2 id="Q5">5. What share of total EU emission releases does the E-PRTR cover?</h2>
+<p>The E-PRTR sets thresholds for each specific pollutant.  Where an installation emits above the thresholds concerned then it must subsequently report its releases against each relevant pollutant. The actual thresholds have been set with the intention of covering for each specific pollutant about 90% of the total mass emissions from facilities regulated under E-PRTR.</p>
+<p>An analysis will be carried out to evaluate the specific share of E-PRTR emission releases against EU total during the triennial data review.</p>
+<h2 id="Q6">6. Are E-PRTR data complete and comparable?</h2>
+<p>All parties involved (operators, competent authorities, national authorities, the European Commission and the European Environment Agency) strive to achieve the highest possible degree of completeness and comparability when reporting and processing E-PRTR data. E-PRTR covers data reported by many countries and collected from a wide range of sectors of activity and more than 28 000 individual sources of data. The complexity of this exercise puts some boundaries on the completeness and comparability of the data and the first E-PRTR collection of data has required considerable efforts from all parties involved to prevent and correct errors and omissions.</p>
+<p>The E-PRTR data on total annual releases and transfers do not provide for direct comparisons of individual facilities' environmental performance because large facilities with good environmental performance can have higher annual releases than much smaller facilities performing poorly. Between sectors, the variety of production processes and products manufactured has also to be considered when making comparisons. Under E-PRTR, operators are not required to report "activity data" (for instance on production volume or energy consumption) although this information can be provided on a voluntary basis.</p>
+<p>In addition, different techniques are used to determine releases and transfers in different countries, thus creating differing levels of uncertainty. The method used to determine releases and transfers is provided in the register to allow users to better compare data.</p>
+<p>A technical review of the dataset is carried out by the European Environment Agency and its European Topic Centres to support the countries to assess the completeness and the comparability of the reported data.</p>
+<h2 id="Q7">7. What are the main differences between EPER and E-PRTR</h2>
+<p>The EPER register was established in 2000 through Commission Decision <a href="http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:32000D0479:EN:HTML">2000/479/EC</a></p>
+<p>The EPER and E-PRTR registers both have the main objective to provide transparent access to environmental information on industrial facilities. However, the new E-PRTR register is more comprehensive in comparison to EPER due to the following main improvements:</p>
+<ul>
+<li>The E-PRTR register concerns 91 pollutants and 65 economic activities instead of 50 pollutants and 56 activities under EPER. </li>
+<li>Data are available for 28 000 facilities instead of 12 000 under EPER.</li>
+<li>Releases to land are now included as well as off-site transfers of waste and releases of pollutants in waste water.</li>
+<li>The reporting is annual instead of triennial under EPER (where 2001 and 2004 data available).</li>
+<li>Releases caused by accidents on the site of the facilities have to be reported by the operators;</li>
+<li>The E-PRTR register includes information on the method used to derive releases and transfers and the designation</li>
+<li>The E-PRTR register includes information on diffuse emissions.</li>
+</ul>
+<h2 id="Q8">8. Can E-PRTR and EPER data be compared?</h2>
+<p>Comparability between EPER and E-PRTR data is possible at facility level if the facility has reported under both regimes and if the activity under the scope of EPER and E-PRTR with regard to this activity (main activity) remains unchanged.</p>
+<p>Almost all the EPER pollutants correspond to the E-PRTR pollutants except for two groups of substances: (1) mono aromatic hydrocarbons (benzene, toluene, ethyl benzene, xylenes known as BTEX) that are reported as individual releases if the thresholds of BTEX is exceeded and (2) polycyclic aromatic hydrocarbons (PAHs). Furthermore, CO<sub>2</sub> emissions are reported differently under EPER and E-PRTR (EPER excludes emissions from biomass).</p>
+<h2 id="Q9">9. What are the links and the main differences between the European PRTR and the PRTR Protocol?</h2>
+<p>In 1998 the United Nations Economic Commission for Europe  Convention on Access to Information, Public Participation in Decision-making and Access to Justice on Environmental Matters, known as <a href="http://www.unece.org/env/pp/introduction.html">Aarhus Convention</a>, entered into force. Under the Aarhus Convention, a specific <a href="http://www.unece.org/env/pp/prtr.htm">Protocol on Pollutant Release and Transfer Registers (PRTR)</a> was adopted in May 2003 and entered into force in October 2009.</p>
+<p>In order for the European Community (signatory to the Protocol) to implement this PRTR Protocol, the European Pollutant Release and Transfer Register (E-PRTR) was established in 2006 through <a href="http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2006:033:0001:0017:EN:PDF">Regulation (EC) No 166/2006</a>. The Protocol sets minimum requirements. Parties to the Protocol can set stricter conditions for the establishment and functioning of their PRTR systems while working towards convergence between these systems.</p>
+<p>The EC Regulation goes beyond the PRTR Protocol by requiring the reporting on 5 additional pollutants (Octylphenols and Octylphenol ethoxylates, Fluoranthene, Isodrin, Hexabromobiphenyl, Benzo(g,h,i)perylene) and imposing more stringent thresholds for another 6 pollutants; PCDD (dioxins), PCDF (furans), tetrachloroethylene, tetrachloromethane, trichlorobenzene, trichloroethylene and trichloromethane.</p>
+<p>There are some other differences:</p>
+<ul>
+<li>The thresholds for off-site transfers of waste water defined in the E-PRTR Regulation are for a large number of pollutants more stringent compared to the thresholds in the PRTR Protocol. </li>
+<li>The Protocol includes two different approaches to define the facility scope; capacity thresholds or employee thresholds. In the E-PRTR Regulation the capacity threshold approach was chosen. </li>
+<li>For waste transfers, the Protocol provides for two different approaches to define the threshold above which waste transfers have to be reported; total amounts of waste transferred or total amounts of a specific pollutant transferred in the waste.  In E-PRTR the mass based approach (threshold based on the total amount of waste transferred) has been chosen. </li>
+</ul>
+<p>According to this Regulation, the Commission, assisted by the European Environment Agency, must make the European PRTR publicly accessible by dissemination free of charge on the Internet. This is the purpose of this E-PRTR web-site.</p>
+<h2 id="Q10">10. How has the quality of E-PRTR data been checked?</h2>
+<p>Operators subject to the E-PRTR Regulation are required to provide competent authorities with the best available data on their facilities' pollutant releases and transfers.</p>
+<p>It lies within the remit of the national competent authorities assess the quality of the data and whether the information provided by the individual facilities is satisfactory with respect to its completeness, consistency and accuracy.  For additional explanation on the quality control and assurance processes in each EU Member State, please see the <a href="docs/EN_E-PRTR_fin.pdf ">E-PRTR guidance document </a>and the links to the existing <a href="pgLinksNationalRegisters.aspx">national registers.</a></p>
+<p>Member States, the Commission and the European Environment Agency (EEA) have checked that the data submitted comply with the agreed reporting format through different automatic validation processes. The validation covers key information such as the type of pollutants, the codes for industrial sectors, the geographical coordinates and the format of the data. Such a validation is required before data can be included in the E-PRTR register.</p>
+<p>The datasets are assessed and reviewed including comparison with data reported under the previous register EPER as well as a geographical check.</p>
+<h2 id="Q11">11. How do I know whether the reported releases are dangerous?</h2>
+<p>A summary description of the 91 E-PRTR pollutants is <a href="http://prtr.ec.europa.eu/pgLibraryPollutants.aspx">provided here.</a></p>
+<p>&nbsp;This information does not, however, indicate the risk to human health or the environment from the emission releases levels in a specific area at a specific point in time.</p>
+<p>In accordance with European and national legislation, facilities covered by E-PRTR can only operate if they have been issued the appropriate permits which set out the conditions established by the competent authorities to protect human health and the environment. E-PRTR does not assess facilities' compliance with these permitting conditions. Exceedance of the E-PRTR annual emission threshold values does not mean that the facilities are not compliant with their permit conditions. Requests for information on compliance issues should be addressed to the Member States' competent authorities.</p>
+<h2 id="Q12">12. Is any information kept confidential?</h2>
+<p>All PRTR data reported by operators appears on the website except the data claimed as confidential by the Member State.</p>
+<p>Whenever information is kept confidential by a Member State in accordance with Article 4 of <a href="http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2003:041:0026:0032:EN:PDF">Directive 2003/4/EC</a> on public access to environmental information, the Member State has to indicate separately for each data that has been withheld, the reason for which it has been withheld.</p>
+<h2 id="Q13">13. Which facilities are shown on the maps?</h2>
+<p>All facilities have to report their geographical co-ordinates, which are shown on the maps. However, in a small number of cases, the reported coordinate of a particular facility might not be correct. As a result, this facility may appear on maps outside the EU.</p>
+<h2 id="Q14">14. The general information delivered by the facilities sometimes varies. Why is this?</h2>
+<p>E-PRTR includes some data reported voluntary related to production volumes, number of installations, number of operating hours and number of employees. Some facilities have reported this information while others have not.</p>
+<h2 id="Q15">15. What are the interactions between the E-PRTR register and the IPPC Directive?</h2>
+<p><strong> </strong>Most facilities reporting under E-PRTR carry out activities which fall under the scope of the IPPC Directive (<a href="http://eur-lex.europa.eu/JOHtml.do?uri=OJ%3AL%3A2008%3A024%3ASOM%3AEN%3AHTML">Directive 2008/1/EC</a> concerning integrated pollutant prevention and control).</p>
+<p>The IPPC Directive requires industrial installations falling under its scope to operate in accordance with permits including emission limit values based on the best available techniques (BAT), designed to prevent and, where that is not practicable, generally to reduce emissions and the impact to the environment as a whole. For more information on the IPPC Directive, see the Commission <a href="http://ec.europa.eu/environment/air/pollutants/stationary/ippc/summary.htm">IPPC web-site</a> and the <a href="http://iris.eionet.europa.eu/">IRIS</a> (Industrial emissions Reporting Information System) web-site.</p>
+<p>However, some E-PRTR activities are partially or not covered by the IPPC Directive, for instance the activities mentioned below (the code used referred to the number used in Annex I of the E-PRTR Regulation):</p>
+<ul>
+<li>1(e) Coal rolling mills;</li>
+<li>1(f) Installations for the manufacture of coal products and solid smokeless fuel;</li>
+<li>3(a) Underground mining and related operations;</li>
+<li>3(b) Opencast mining and quarrying;</li>
+<li>5(f) Urban waste-water treatment plants;</li>
+<li>5(g) Independently operated industrial waste-water treatment plants;</li>
+<li>6(b) Industrial plants for the production of paper, board and other primary wood products (such as chipboard, fibreboard and plywood);</li>
+<li>6(c) Industrial plants for the preservation of wood and wood products with chemicals;</li>
+<li>7(b) Intensive aquaculture;</li>
+<li>9(e) Installations for the building of, and painting or removal of paint from ships.</li>
+</ul>
+<p>A full comparison between IPPC activites and E-PRTR activities is available in Appendix 2 of the E-PRTR <a href="docs/EN_E-PRTR_fin.pdf ">Guidance document</a>.</p>
+<h2 id="Q16">16. What are the interactions between the E-PRTR register and the Emission Trading Scheme Directive?</h2>
+<p>Most activities falling under the Greenhouse Gas Emission Trading Scheme Directive (Directive <a href="http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2009:140:0063:0087:en:PDF">2009/29/EC</a>) are subject to the E-PRTR Regulation. Notable exceptions are combustion of fuels in installation with a total rated thermal input between 20 and 50 MW. In addition, some of the ETS activities descriptions slightly differ from the E-PRTR activities.</p>
+<p>Please also note that under E-PRTR there is a facility-based reporting and under EU ETS an installation-based reporting which makes the data not directly comparable.</p>
+<p>For more information on the ETS Directive, see the Commission&rsquo;s <a href="http://ec.europa.eu/environment/climat/emission/ets_post2012_en.htm">EU ETS web-site</a>.</p>
+<h2 id="Q17">17. Which methodologies are used for reporting data under E-PRTR?</h2>
+<p>Reporting to E-PRTR is carried out based on measurement, calculation or estimation of releases and off-site transfers.</p>
+<p>Where reported data are based on measurements or calculation, the method is indicated in the E-PRTR register using the following designations:</p>
+<table style="width: 99%;" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="border: #000000 1px solid;" colspan="2">
+<p align="center"><em>Measurement methodologies</em></p>
+</td>
+</tr>
+<tr>
+<td style="border: #000000 1px solid;">
+<p align="center">Designation</p>
+</td>
+<td style="border: #000000 1px solid;">
+<p align="center">Method used for determination of releases/off-site transfers</p>
+</td>
+</tr>
+<tr>
+<td style="border: #000000 1px solid;">
+<p align="center">Relevant standard (e.g. EN 14385:2004)</p>
+</td>
+<td style="border: #000000 1px solid;">
+<p>Internationally approved measurement standard</p>
+</td>
+</tr>
+<tr>
+<td style="border: #000000 1px solid;">
+<p align="center">PER*</p>
+</td>
+<td style="border: #000000 1px solid;">
+<p>Measurement methodology already prescribed by the competent authority in a licence or an operating permit for that facility</p>
+</td>
+</tr>
+<tr>
+<td style="border: #000000 1px solid;">
+<p align="center">NRB*</p>
+</td>
+<td style="border: #000000 1px solid;">
+<p>National or regional binding measurement methodology prescribed by legal act for the pollutant and facility concerned</p>
+</td>
+</tr>
+<tr>
+<td style="border: #000000 1px solid;">
+<p align="center">ALT</p>
+</td>
+<td style="border: #000000 1px solid;">
+<p>Alternative Measurement Method in accordance with existing CEN/ISO measurement standards</p>
+</td>
+</tr>
+<tr>
+<td style="border: #000000 1px solid;">
+<p align="center">CRM</p>
+</td>
+<td style="border: #000000 1px solid;">
+<p>Measurement methodology the performance of which is demonstrated by means of certified reference materials and accepted by competent authority</p>
+</td>
+</tr>
+<tr>
+<td style="border: #000000 1px solid;">
+<p align="center">OTH*</p>
+</td>
+<td style="border: #000000 1px solid;">
+<p>Other measurement methodology</p>
+</td>
+</tr>
+<tr>
+<td style="border: #000000 1px solid;">
+<p align="center">*</p>
+</td>
+<td style="border: #000000 1px solid;">
+<p>In addition to the three letter abbreviation (e.g. NRB) the short designation (e.g. VDI 3873) or a short description of the methodology could be given</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table style="width: 99%;" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="border: #000000 1px solid;" colspan="2">
+<p align="center"><em>Calculation methodologies</em></p>
+</td>
+</tr>
+<tr>
+<td style="border: #000000 1px solid;">
+<p align="center">Designation</p>
+</td>
+<td style="border: #000000 1px solid;">
+<p align="center">Method used for determination of releases/off-site transfers</p>
+</td>
+</tr>
+<tr>
+<td style="border: #000000 1px solid;">
+<p align="center">Short designation of the method used: ETS, IPCC, UNECE/EMEP</p>
+</td>
+<td style="border: #000000 1px solid;">
+<p>Internationally approved calculation method</p>
+</td>
+</tr>
+<tr>
+<td style="border: #000000 1px solid;">
+<p align="center">PER*</p>
+</td>
+<td style="border: #000000 1px solid;">
+<p>Calculation methodology already prescribed by the competent authority in a licence or an operating permit for that facility</p>
+</td>
+</tr>
+<tr>
+<td style="border: #000000 1px solid;">
+<p align="center">NRB*</p>
+</td>
+<td style="border: #000000 1px solid;">
+<p>National or regional binding calculation methodology prescribed by legal act for the pollutant and facility concerned</p>
+</td>
+</tr>
+<tr>
+<td style="border: #000000 1px solid;">
+<p align="center">MAB*</p>
+</td>
+<td style="border: #000000 1px solid;">
+<p>Mass balance method which is accepted by the competent authority</p>
+</td>
+</tr>
+<tr>
+<td style="border: #000000 1px solid;">
+<p align="center">SSC</p>
+</td>
+<td style="border: #000000 1px solid;">
+<p>European-wide sector specific calculation method</p>
+</td>
+</tr>
+<tr>
+<td style="border: #000000 1px solid;">
+<p align="center">OTH*</p>
+</td>
+<td style="border: #000000 1px solid;">
+<p>Other calculation methodology</p>
+</td>
+</tr>
+<tr>
+<td style="border: #000000 1px solid;">
+<p align="center">*</p>
+</td>
+<td style="border: #000000 1px solid;">
+<p>In addition to the three letter abbreviation (e.g. NRB) the short designation (e.g. VDI 3873) or a short description of the methodology could be given</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Q18">18. How are the E-PRTR searches organised?</h2>
+<h3>The "facility level" option</h3>
+<p>The facility search allows the user to search and select E-PRTR data using almost all of its parameters. Default search criteria include country, year and region or river basin districts, facility name and town/village. The advanced search options allow the user to expand the search tool and use the criteria activity, pollutant releases and transfers and waste transfers.</p>
+<p>The outcome of this search option is a list of facilities fulfilling the criteria chosen by the user and a map display of these facilities. When clicking on the name of the facility or its location on the map, detailed information for the selected facility is shown, including its reported releases and transfers (where above the PRTR thresholds). If confidentiality has been claimed, the reason for this is provided.</p>
+<p>In the results page, using the "back and forward button" it is possible to retrieve data reported by the facilities in previous years, under the EPER regime.</p>
+<h3>The "industrial activity" option</h3>
+<p>The industrial activity search allows the user to search data using the activity categories included in the E-PRTR Regulation, in the NACE economical classification and in Annex I of the IPPC Directive. As ancillary criteria it is possible to filter by country, year, region or river basin district.</p>
+<p>The outcome of this search option is a report which displays the aggregated releases and transfers (pollutants and waste) of a specific industrial activity or a sector and the list of facilities fulfilling the criteria set out by the user.</p>
+<h3>The "pollutant releases" option</h3>
+<p>The pollutant releases option allows the user to search data using the groups of pollutants or each of the 91 substances of Annex II of the E-PRTR Regulation as main criterion. As ancillary criteria it is possible to filter by country, year, region (not available for the moment) or river basin district. As advanced search options the user can expand the search utility and use the criteria of the activity search option.</p>
+<p>The outcome of this search option is a report of the aggregated releases of a specific pollutant. The information is provided on several sheets displaying a summary of releases of the selected pollutant per activity group, a table with those data, the total release of each pollutant per country (table and graph) and a list of facilities releasing the concerned pollutant.</p>
+<h3>The "pollutant transfers" option</h3>
+<p>The pollutant transfers option allows the user to search data using the groups of pollutants or each of the 91 substances of Annex II of the E-PRTR Regulation as main criterion. As ancillary criteria it is possible to filter by country, year, region (not available for the moment) or river basin district. As advanced search options the user can expand the search utility and use the criteria of the activity search option.</p>
+<p>The outcome of this search option is a report of the aggregated transfers of a specific pollutant. The information is provided on several sheets displaying a summary of transfers of the selected pollutant per activity group, a table with those data, the total transfer of each pollutant per country (table and graph) and a list of facilities transferring the concerned pollutant.</p>
+<h3>The "waste transfer" option</h3>
+<p>The waste transfer option allows the user to retrieve data on waste movements within and outside the country. As main criterion the data can be searched by the type of waste (non hazardous or hazardous). For hazardous waste, a distinction is made between domestic (in the same country) or transboundary transfers. As ancillary criteria it is possible to filter by country, year, region (not available for the moment) or river basin district. As advanced search options the user can expand the search utility and use the criteria of the activity search option.</p>
+<p>The outcome of this search option is a report of the annual waste transfers. The information is provided on several sheets displaying a summary of transfers by type of waste; by activity group; the total transfer of each category per country (table and graph); a list of facilities transferring each type of waste; a graph displaying hazardous waste transfers and a table of countries with the quantity of hazardous waste received. Clicking on the country a list of specific facilities within the country is displayed.</p>
+<h3>The "map search" option</h3>
+<p>The map search provides the user with access to the geographical data of the E-PRTR. The map displays all facilities within the E-PRTR register.</p>
+<p>The map can be displayed with three different backgrounds clicking on the option on the top left part of the map.</p>
+<p>The map has several navigation utilities on the right:</p>
+<ul>
+<li>The option "overview map" allows the user to move the map in all directions.</li>
+<li>The option "bookmarks" allows the user moving from continental Europe to overseas areas of European countries such as the Canary Islands, French Polynesia and Guadeloupe and Martinique.</li>
+<li>The option "Layer list" allows the user to enable or disable sectors. Using the top right icons it is possible to adjust the layer transparency and set a different reporting year (for the moment only 2007). </li>
+<li>The option "Search" allows the user, by clicking on the top right icons, to choose the shape of the selection tool, to select a facility using its name as well as to view the selected facilities. </li>
+<li>The option "print and download" allows the user to print the map displayed on the screen as well as download it in a PDF or PNG file.</li>
+</ul>
+<p>On the left part of the map the user will find the zoom utilities (scale; zoom in; zoom out; full extent and zoom to previous) as well as the pan and the selection tool.</p>
+<h2 id="q19">19. Supported browsers for the use of the website</h2>
+<p>The E-PRTR website is optimized for <em>Internet Explorer 7.0</em>. However, the current settings of the E-PRTR website allow using other browsers. Please note that the behaviour of the website might change or be inefficient when using browsers other than Internet Explorer 7.0.</p>

@@ -15,16 +15,19 @@
                 <property name="password" value="password" />
         </bean>
 
+<!--
         <bean id="liquibase" class="liquibase.integration.spring.SpringLiquibase">
                 <property name="dataSource" ref="dataSource" />
                 <property name="changeLog" value="classpath:master-changelog.xml" />
 
+-->
               <!-- contexts specifies the runtime contexts to use.  -->
               <!--
               <property name="contexts" value="test, production" />
               -->
+<!--
         </bean>
-
+-->
         <bean id="simpleDocDAO" class="eea.eprtr.dao.SimpleDocDAOImpl">
                 <property name="dataSource" ref="dataSource" />
         </bean>
