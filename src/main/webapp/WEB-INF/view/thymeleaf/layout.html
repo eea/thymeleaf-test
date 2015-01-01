@@ -74,12 +74,11 @@
         </div>
         <div class="breadcrumbtrail">
           <div class="breadcrumbhead">You are here:</div>
-          <div class="breadcrumbitem eionetaccronym" th:remove="all">
+          <div class="breadcrumbitem eionetaccronym">
             <a href="http://www.eionet.europa.eu">Eionet</a>
           </div>
           <th:block th:each="item, itemStat : ${breadcrumbs}">
-            <div class="breadcrumbitem" th:unless="${itemStat.last}"
-                th:class="${itemStat.first} ? 'breadcrumbitem eionetaccronym' : 'breadcrumbitem'">
+            <div class="breadcrumbitem" th:unless="${itemStat.last}">
               <a href="#" th:href="@{${item.link}}" th:text="${item.linktext}">Middle breadcrumb</a>
             </div>
             <div class="breadcrumbitemlast" th:if="${itemStat.last}" th:text="${item.linktext}">Last breadcrumb</div>
@@ -102,13 +101,22 @@
       <div id="workarea">
         <h1 th:text="${title}">Page title here</h1>
         <p>
-Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.
+Collaboratively administrate empowered markets via plug-and-play
+networks. Dynamically procrastinate B2C users after installed base
+benefits. Dramatically visualize customer directed convergence without
+revolutionary ROI.
         </p>
         <p>
-Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.
+Efficiently unleash cross-media information without cross-media
+value. Quickly maximize timely deliverables for real-time
+schemas. Dramatically maintain clicks-and-mortar solutions without
+functional solutions.
         </p>
         <p>
-Completely synergize resource sucking relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.
+Completely synergize resource sucking relationships via premier niche
+markets. Professionally cultivate one-to-one customer service with robust
+ideas. Dynamically innovate resource-leveling customer service for state
+of the art customer service.
         </p>
       </div>
       <!-- workarea -->

@@ -17,7 +17,7 @@ public class BreadCrumbsTest {
         BreadCrumbs.set(testModel);
         assertTrue(testModel.containsAttribute("breadcrumbs"));
         List<BreadCrumb> breadcrumbList = (List<BreadCrumb>) testModel.get("breadcrumbs");
-        assertEquals(2, breadcrumbList.size());
+        assertEquals(1, breadcrumbList.size());
     }
 
     @Test
@@ -26,6 +26,6 @@ public class BreadCrumbsTest {
         BreadCrumbs.set(testModel, new BreadCrumb("/about", "About E-PRTR"));
         assertTrue(testModel.containsAttribute("breadcrumbs"));
         List<BreadCrumb> breadcrumbList = (List<BreadCrumb>) testModel.get("breadcrumbs");
-        assertEquals(3, breadcrumbList.size());
+        assertEquals(2, breadcrumbList.size());
     }
 }

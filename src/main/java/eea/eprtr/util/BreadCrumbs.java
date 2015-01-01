@@ -11,7 +11,7 @@ import eea.eprtr.model.BreadCrumb;
 public class BreadCrumbs {
 
     /** Eionet portal. This should be part of the layout template - not here. */
-    private static BreadCrumb eionetCrumb;
+    //private static BreadCrumb eionetCrumb;
 
     /** Toplevel of this site. */
     private static BreadCrumb homeCrumb;
@@ -21,7 +21,7 @@ public class BreadCrumbs {
     }
 
     static {
-        eionetCrumb = new BreadCrumb("http://www.eionet.europa.eu/", "Eionet");
+        //eionetCrumb = new BreadCrumb("http://www.eionet.europa.eu/", "Eionet");
         homeCrumb = new BreadCrumb("/", "E-PRTR");
     }
 
@@ -45,7 +45,7 @@ public class BreadCrumbs {
     public static void set(Model model, BreadCrumb... crumbs) {
         List<BreadCrumb> breadcrumbList = new ArrayList<BreadCrumb>();
 
-        breadcrumbList.add(eionetCrumb);
+        //breadcrumbList.add(eionetCrumb);
         breadcrumbList.add(homeCrumb);
 
         for (BreadCrumb crumb : crumbs) {
