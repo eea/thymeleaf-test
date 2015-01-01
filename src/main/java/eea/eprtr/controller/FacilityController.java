@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import eea.eprtr.model.FacilityName;
+import eea.eprtr.util.BreadCrumbs;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,6 +26,7 @@ public class FacilityController {
     public String findFacilitiesThymeLeaf(Model model){
         buildFacilityList(model);
         model.addAttribute("title", "Facilities List");
+        BreadCrumbs.set(model, "Facilities List");
         return "thymeleaf/facilities";
     }
 
@@ -33,6 +35,7 @@ public class FacilityController {
         buildFacilityList(model);
         model.addAttribute("title", "Facility #" + facilityId);
         model.addAttribute("content", "Nothing here at the moment");
+        BreadCrumbs.set(model, "/facilities", "Facilities List", "Facility #" + facilityId);
         return "thymeleaf/simplecontent";
     }
 

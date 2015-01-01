@@ -9,7 +9,7 @@ public class BreadCrumb {
     private String link;
     /** The text for the link. */
     private String linktext;
-    
+
 
     public BreadCrumb(String link, String linktext) {
         this.link = link;
@@ -23,7 +23,7 @@ public class BreadCrumb {
     /**
      * Return the breadcrumb link text, but truncate it if it is longer than 25 characters.
      */
-    public String getLinkText() {
+    public String getLinktext() {
         if (linktext == null || "".equals(linktext)) {
             return "Unknown";
         } else if (linktext.length() >= 25) {
@@ -32,5 +32,5 @@ public class BreadCrumb {
             return linktext;
         }
     }
-    
+
 }

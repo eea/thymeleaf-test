@@ -13,7 +13,7 @@ import org.springframework.jdbc.core.RowMapper;
  
 import eea.eprtr.model.SimpleDoc;
  
-public class SimpleDocDAOImpl implements SimpleDocDAO {
+public class SimpleDocDAOJdbc implements SimpleDocDAO {
  
     //@Autowired  
     private DataSource dataSource;

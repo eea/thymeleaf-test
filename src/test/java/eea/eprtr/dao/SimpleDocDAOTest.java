@@ -6,6 +6,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  
 import eea.eprtr.model.SimpleDoc;
 import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
  
 // See http://www.journaldev.com/2593/spring-jdbc-and-jdbctemplate-crud-with-datasource-example-tutorial
 public class SimpleDocDAOTest {
@@ -13,9 +15,9 @@ public class SimpleDocDAOTest {
     @Test
     public void simpleTest() {
         //Get the Spring Context
-        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("spring-db-config.xml");
+        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("spring-dbtest-config.xml");
          
-        //Get the SimpleDocDAO Bean
+        //Get the SimpleDocDAO Bean from the context.
         SimpleDocDAO simpledocDAO = ctx.getBean("simpleDocDAO", SimpleDocDAO.class);
          
         //Run some tests for JDBC CRUD operations
@@ -26,13 +28,12 @@ public class SimpleDocDAOTest {
          
         //Read
         SimpleDoc doc1 = simpledocDAO.getByName("about");
-        System.out.println("SimpleDoc Retrieved::" + doc1);
-         
+        assertNotNull(doc1);
          
         //Get All
         List<SimpleDoc> docList = simpledocDAO.getAll();
-        System.out.println(docList);
-         
+        assertEquals(3, docList.size());
+
         //Close Spring Context
         ctx.close();
     }

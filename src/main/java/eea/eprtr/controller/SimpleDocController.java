@@ -2,6 +2,7 @@ package eea.eprtr.controller;
 
 import eea.eprtr.model.SimpleDoc;
 import eea.eprtr.dao.SimpleDocDAO;
+import eea.eprtr.util.BreadCrumbs;
 import java.io.InputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -64,6 +65,7 @@ public class SimpleDocController {
             System.out.println("Doc was null");
         model.addAttribute("title", doc.getTitle());
         model.addAttribute("content", doc.getContent());
+        BreadCrumbs.set(model, doc.getTitle());
     }
 
 /*

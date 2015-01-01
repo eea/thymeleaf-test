@@ -13,6 +13,7 @@
                 <property name="password" value="password" />
         </bean>
 
+        <!-- Run database refactorings at startup using Liquibase -->
         <bean id="liquibase" class="liquibase.integration.spring.SpringLiquibase">
                 <property name="dataSource" ref="dataSource" />
                 <property name="changeLog" value="classpath:database/CMS.xml" />
@@ -24,7 +25,7 @@
               -->
         </bean>
 
-        <bean id="simpleDocDAO" class="eea.eprtr.dao.SimpleDocDAOImpl">
+        <bean id="simpleDocDAO" class="eea.eprtr.dao.SimpleDocDAOJdbc">
                 <property name="dataSource" ref="dataSource" />
         </bean>
 </beans>

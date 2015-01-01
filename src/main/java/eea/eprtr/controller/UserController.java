@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import eea.eprtr.model.User;
+import eea.eprtr.util.BreadCrumbs;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -27,6 +28,7 @@ public class UserController {
     public String findUsersThymeLeaf(Model model){
         buildUserList(model);
         model.addAttribute("title", "Users List");
+        BreadCrumbs.set(model, "Users List");
         return "thymeleaf/users";
     }
 

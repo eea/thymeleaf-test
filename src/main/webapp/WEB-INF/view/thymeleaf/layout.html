@@ -73,11 +73,18 @@
         </div>
         <div class="breadcrumbtrail">
           <div class="breadcrumbhead">You are here:</div>
-          <div class="breadcrumbitem eionetaccronym">
+          <div class="breadcrumbitem eionetaccronym" th:remove="all">
             <a href="http://www.eionet.europa.eu">Eionet</a>
           </div>
-          <div class="breadcrumbitemlast">E-PRTR</div>
-          <div class="breadcrumbtail"/>
+          <th:block th:each="item, itemStat : ${breadcrumbs}">
+            <div class="breadcrumbitem" th:unless="${itemStat.last}"
+                th:class="${itemStat.first} ? 'breadcrumbitem eionetaccronym' : 'breadcrumbitem'">
+              <a href="#" th:href="@{${item.link}}" th:text="${item.linktext}">Middle breadcrumb</a>
+            </div>
+            <div class="breadcrumbitemlast" th:if="${itemStat.last}" th:text="${item.linktext}">Last breadcrumb</div>
+          </th:block>
+          <div class="breadcrumbtail">
+          </div>
         </div>
         <div id="leftcolumn">
           <div class="localnav" th:fragment="menuFragment">
