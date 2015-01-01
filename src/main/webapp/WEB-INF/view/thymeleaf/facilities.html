@@ -19,7 +19,7 @@
             </thead>
             <tbody>
               <tr th:each="facilities : ${facilities}">
-                <td><a href="#" th:href="@{'/facilities/' + ${facilities.code} + '.html'}" th:text="${facilities.code}">99999</a></td>
+                <td><a href="#" th:href="@{'/facilities/' + ${facilities.code}}" th:text="${facilities.code}">99999</a></td>
                 <td th:text="${facilities.name}">Long realistic company name</td>
               </tr>
             </tbody>

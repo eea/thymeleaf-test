@@ -1,3 +1,10 @@
-tr:nth-child(odd)  { background-color: #eee; }
-tr:nth-child(even) { background-color: #fff; }
+table {
+    border: 1px solid black;
+}
+body tr:nth-child(odd)  {
+    background-color: #eee;
+}
+body tr:nth-child(even) {
+    background-color: #fff;
+}
 

@@ -17,10 +17,14 @@
                 <th> Last name </th>
               </tr>
             </thead>
-            <tbody>
+            <tbody th:remove="all-but-first">
               <tr th:each="user : ${users}">
                 <td th:text="${user.firstName}">John</td>
                 <td th:text="${user.lastName}">Smith</td>
+              </tr>
+              <tr>
+                <td>Jane</td>
+                <td>Doe</td>
               </tr>
             </tbody>
           </table>

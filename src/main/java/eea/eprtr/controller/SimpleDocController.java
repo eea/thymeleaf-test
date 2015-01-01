@@ -29,17 +29,21 @@ public class SimpleDocController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String frontpage(Model model) {
         loadFromDB("index", model);
+        // This is toplevel. No breadcrumbs.
+        BreadCrumbs.set(model);
         return "thymeleaf/simplecontent";
     }
 
     /**
      * Backup frontpage (Due to the .html suffix).
      */
+    /*
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String index(Model model) {
         loadFromDB("index", model);
         return "thymeleaf/simplecontent";
     }
+    */
 
     /**
      * About.
@@ -67,21 +71,4 @@ public class SimpleDocController {
         model.addAttribute("content", doc.getContent());
         BreadCrumbs.set(model, doc.getTitle());
     }
-
-/*
-    private void loadFromDB(String name, Model model) {
-        Properties props = new Properties();
-        try {
-            InputStream inStream = SimpleDocController.class.getResourceAsStream("/" + name + ".properties");
-            props.load(inStream);
-            inStream.close();
-            for (String key : props.stringPropertyNames()) {
-                model.addAttribute(key, props.getProperty(key));
-            }
-        } catch (IOException e) {
-           model.addAttribute("title", "No properties file");
-           model.addAttribute("content", "No properties file");
-        }
-    }
-*/
 }
