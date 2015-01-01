@@ -15,7 +15,6 @@ import eea.eprtr.model.SimpleDoc;
  
 public class SimpleDocDAOJdbc implements SimpleDocDAO {
  
-    //@Autowired  
     private DataSource dataSource;
  
     public void setDataSource(DataSource dataSource) {

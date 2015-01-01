@@ -42,13 +42,4 @@
 		<property name="order" value="1" />
 		<property name="viewNames" value="thymeleaf/*" />
 	</bean>
-
-	<!-- Resolves view names to protected .jsp resources within the /WEB-INF/views directory -->
-        <!--
-	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
-		<property name="prefix" value="/WEB-INF/view/jsp/"/>
-		<property name="suffix" value=".jspx"/>
-		<property name="order" value="2"/>
-	</bean>
-        -->
 </beans>
