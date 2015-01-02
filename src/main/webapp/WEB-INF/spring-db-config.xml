@@ -8,7 +8,7 @@
 	
         <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
                 <property name="driverClassName" value="org.h2.Driver" />
-                <property name="url" value="jdbc:h2:file:/var/tmp/eprtrwebdb" />
+                <property name="url" value="jdbc:h2:mem:prtrwebdb;DB_CLOSE_DELAY=-1" />
                 <property name="username" value="dbuser" />
                 <property name="password" value="password" />
         </bean>
