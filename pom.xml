@@ -98,11 +98,13 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.1.1</version>
                 <configuration>
+                <!--
                     <filters>
                         <filter>${basedir}/${env}.properties</filter>
                     </filters>
+                -->
                     <webResources>
-            <!--
+                <!--
                         <resource>
                             <directory>${basedir}/src/main/webapp/META-INF</directory>
                             <filtering>true</filtering>
@@ -119,7 +121,7 @@
                                 <include>web.xml</include>
                             </includes>
                         </resource>
-            -->
+                -->
                         <resource>
                             <directory>${basedir}/database</directory>
                             <targetPath>WEB-INF/classes/database</targetPath>
@@ -212,9 +214,11 @@
 
         <!-- filters for src/main/resources and src/test/resources -->
 
+        <!--
         <filters>
             <filter>${env}.properties</filter>
         </filters>
+        -->
 
         <!-- resources for the main code -->
 
