@@ -29,7 +29,7 @@ public class UserController {
         buildUserList(model);
         model.addAttribute("title", "Users List");
         BreadCrumbs.set(model, "Users List");
-        return "thymeleaf/users";
+        return "users";
     }
 
     private void buildUserList(Model model) {

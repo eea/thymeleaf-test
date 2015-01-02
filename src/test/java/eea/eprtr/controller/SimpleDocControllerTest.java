@@ -21,12 +21,12 @@ import org.springframework.web.context.WebApplicationContext;
 
 
 /**
- * Test the user controller.
+ * Test the simple doc controller.
  *
  * @see <a href="http://docs.spring.io/spring-framework/docs/3.2.0.BUILD-SNAPSHOT/reference/htmlsingle/#spring-mvc-test-framework">MVC testing</a>
  * @see <a href="http://docs.spring.io/spring-framework/docs/3.2.0.RC2/api/org/springframework/test/web/servlet/ResultActions.html">Result Actions</a>
  */
-public class UserControllerTest {
+public class SimpleDocControllerTest {
 
     @Autowired
     private WebApplicationContext wac;
@@ -39,10 +39,11 @@ public class UserControllerTest {
     }
 
     @Test
-    public void testListUsers() throws Exception {
-        this.mockMvc.perform(get("/users"))
+    public void testAbout() throws Exception {
+        this.mockMvc.perform(get("/about"))
                 .andExpect(status().isOk())
-                .andExpect(model().attributeExists("users"))
-                .andExpect(view().name("users"));
+                .andExpect(model().attributeExists("breadcrumbs"))
+                .andExpect(model().attributeExists("content"))
+                .andExpect(view().name("simplecontent"));
     }
 }

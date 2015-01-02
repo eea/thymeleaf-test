@@ -27,7 +27,7 @@ public class BreadCrumb {
         if (linktext == null || "".equals(linktext)) {
             return "Unknown";
         } else if (linktext.length() >= 25) {
-            return linktext.substring(0, 24) + "…";
+            return linktext.substring(0, 24) + "..."; //"…";
         } else {
             return linktext;
         }

@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title th:text="${title}">Page title</title>
     <link rel="stylesheet" type="text/css" href="http://www.eionet.europa.eu/styles/eionet2007/screen.css" media="screen"/>
-    <link th:href="@{/style/app.css}" rel="stylesheet"/>
+    <link href="../../style/app.css" th:href="@{/style/app.css}" rel="stylesheet"/>
   </head>
   <body>
     <div id="container">
@@ -44,16 +44,14 @@
         <!-- toolribbon -->
         <div id="pagehead">
           <a title="Frontpage" th:href="@{/}" href="#">
-            <img th:src="@{/images/eea-print-logo.gif}" alt="Logo" id="logo" width="428" height="87"/>
+            <img src="../../images/eea-print-logo.gif" th:src="@{/images/eea-print-logo.gif}" alt="Logo" id="logo" width="428" height="87"/>
           </a>
           <div id="networktitle">Eionet</div>
           <div id="sitetitle">European Environment Information and Observation Network</div>
           <div id="sitetagline">Networking improving Europe's environment</div>
         </div>
         <div id="menuribbon">
-          <!-- Last updated: 2014-10-22T07:11:32Z
-     To update download http://www.eionet.europa.eu/dropdownmenus.txt -->
-          <ul id="dropdowns" th:include="thymeleaf/dropdownmenus :: [/ul]">
+          <ul id="dropdowns" th:include="dropdownmenus :: [/ul]">
             <li>
               <a href="http://www.eionet.europa.eu/menuservices">Services</a>
               <ul>

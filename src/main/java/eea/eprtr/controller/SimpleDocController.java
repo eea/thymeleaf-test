@@ -31,7 +31,7 @@ public class SimpleDocController {
         loadFromDB("index", model);
         // This is toplevel. No breadcrumbs.
         BreadCrumbs.set(model);
-        return "thymeleaf/simplecontent";
+        return "simplecontent";
     }
 
     /**
@@ -41,7 +41,7 @@ public class SimpleDocController {
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String index(Model model) {
         loadFromDB("index", model);
-        return "thymeleaf/simplecontent";
+        return "simplecontent";
     }
     */
 
@@ -51,7 +51,7 @@ public class SimpleDocController {
     @RequestMapping(value = "/about", method = RequestMethod.GET)
     public String about(Model model) {
         loadFromDB("about", model);
-        return "thymeleaf/simplecontent";
+        return "simplecontent";
     }
 
     /**
@@ -60,7 +60,7 @@ public class SimpleDocController {
     @RequestMapping(value = "/faq", method = RequestMethod.GET)
     public String faq(Model model) {
         loadFromDB("faq", model);
-        return "thymeleaf/simplecontent";
+        return "simplecontent";
     }
 
     private void loadFromDB(String name, Model model) {

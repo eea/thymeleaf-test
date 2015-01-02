@@ -21,7 +21,8 @@
     </createTable>
   </changeSet>
 
-  <changeSet author="roug" id="rev-2">
+  <changeSet author="roug" id="rev-2" context="demo">
+    <comment>Load some demo data</comment>
     <insert tableName="PAGES">
       <column name="name" value="index"/>
       <column name="title" value="Welcome to E-PRTR"/>
