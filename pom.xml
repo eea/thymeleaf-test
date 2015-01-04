@@ -10,11 +10,10 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <env>local</env>
-        <java_version>1.6</java_version>
-        <spring.version>3.2.0.RELEASE</spring.version>
-        <!-- <spring.version>4.1.4.RELEASE</spring.version> -->
+        <java_version>1.7</java_version>
+        <spring.version>4.1.4.RELEASE</spring.version>
         <tiles.version>3.0.1</tiles.version>
-        <thymeleaf.version>2.0.15</thymeleaf.version>
+        <thymeleaf.version>2.1.4.RELEASE</thymeleaf.version>
         <checkstyle.config.location>${basedir}/doc/checkstyle.xml</checkstyle.config.location>
         <!--
         <liquibase.changeLogFile>database/changelog-master.xml</liquibase.changeLogFile>
@@ -327,22 +326,13 @@
             <artifactId>log4j</artifactId>
             <version>1.2.13</version>
         </dependency>
-        <!-- Spring 3 (Requires Tomcat 6) -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>2.5</version>
-            <scope>provided</scope>
-        </dependency>
         <!-- Spring 4 (Requires Tomcat 7) -->
-        <!--
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>3.0.1</version>
             <scope>provided</scope>
         </dependency>
-        -->
         <!--
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -353,7 +343,7 @@
         <dependency>
             <groupId>javax.servlet.jsp</groupId>
             <artifactId>jsp-api</artifactId>
-            <version>2.1</version>
+            <version>2.2</version>
             <scope>provided</scope>
         </dependency>
 
@@ -401,7 +391,7 @@
         </dependency>
         <dependency>
             <groupId>org.thymeleaf</groupId>
-            <artifactId>thymeleaf-spring3</artifactId>
+            <artifactId>thymeleaf-spring4</artifactId>
             <version>${thymeleaf.version}</version>
         </dependency>
 
