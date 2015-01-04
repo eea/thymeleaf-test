@@ -25,7 +25,10 @@
               -->
         </bean>
 
-        <bean id="simpleDocDAO" class="eea.eprtr.dao.SimpleDocDAOJdbc">
+        <bean id="simpleDocService" class="eea.eprtr.dao.SimpleDocServiceJdbc">
                 <property name="dataSource" ref="dataSource" />
+        </bean>
+
+        <bean id="facilityService" class="eea.eprtr.dao.FacilityServiceDummy">
         </bean>
 </beans>

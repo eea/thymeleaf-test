@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
   <head th:include="layout :: headerFragment">
+  <link href="../../style/app.css" th:href="@{/style/app.css}" rel="stylesheet"/>
   </head>
   <body>
     <div id="container">
@@ -17,10 +18,14 @@
                 <th> Facility name</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody th:remove="all-but-first">
               <tr th:each="facilities : ${facilities}">
                 <td><a href="#" th:href="@{'/facilities/' + ${facilities.code}}" th:text="${facilities.code}">99999</a></td>
                 <td th:text="${facilities.name}">Long realistic company name</td>
+              </tr>
+              <tr>
+                <td><a href="#">88888</a></td>
+                <td>Mom &amp; Pop's little tannery</td>
               </tr>
             </tbody>
           </table>

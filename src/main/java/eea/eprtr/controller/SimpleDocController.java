@@ -1,7 +1,7 @@
 package eea.eprtr.controller;
 
 import eea.eprtr.model.SimpleDoc;
-import eea.eprtr.dao.SimpleDocDAO;
+import eea.eprtr.dao.SimpleDocService;
 import eea.eprtr.util.BreadCrumbs;
 import java.io.InputStream;
 import java.io.IOException;
@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class SimpleDocController {
 
     @Autowired
-    private SimpleDocDAO simpleDocDAO;
+    private SimpleDocService simpleDocService;
 
     /**
      * Frontpage.
@@ -63,8 +63,17 @@ public class SimpleDocController {
         return "simplecontent";
     }
 
+    /**
+     * Diffuse Sources Approach
+     */
+    @RequestMapping(value = "/diffusesourcesapproach", method = RequestMethod.GET)
+    public String diffuseSourcesApproach(Model model) {
+        loadFromDB("diffusesourcesapproach", model);
+        return "simplecontent";
+    }
+
     private void loadFromDB(String name, Model model) {
-        SimpleDoc doc = simpleDocDAO.getByName(name);
+        SimpleDoc doc = simpleDocService.getByName(name);
         if (doc == null)
             System.out.println("Doc was null");
         model.addAttribute("title", doc.getTitle());

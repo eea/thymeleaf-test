@@ -13,7 +13,7 @@
 
   <changeSet author="roug" id="rev-1">
     <createTable tableName="PAGES">
-      <column name="name" type="varchar(16)">
+      <column name="name" type="varchar(32)">
         <constraints primaryKey="true"/>
       </column>
       <column name="title" type="varchar(256)"/>
@@ -37,6 +37,11 @@
       <column name="name" value="faq"/>
       <column name="title" value="Frequently Asked Questions"/>
       <column name="content" valueClobFile="faq.content" encoding="UTF-8"/>
+    </insert>
+    <insert tableName="PAGES">
+      <column name="name" value="diffusesourcesapproach"/>
+      <column name="title" value="Releases from Diffuse Sources - Approach"/>
+      <column name="content" valueClobFile="diffusesourcesapproach.content" encoding="UTF-8"/>
     </insert>
   </changeSet>
 

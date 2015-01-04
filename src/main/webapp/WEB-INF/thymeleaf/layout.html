@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
   <head th:fragment="headerFragment">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <title th:text="${title}">Page title</title>
+    <title th:text="${title}">Layout template</title>
     <link rel="stylesheet" type="text/css" href="http://www.eionet.europa.eu/styles/eionet2007/screen.css" media="screen"/>
     <link href="../../style/app.css" th:href="@{/style/app.css}" rel="stylesheet"/>
   </head>
@@ -46,7 +46,7 @@
           <a title="Frontpage" th:href="@{/}" href="#">
             <img src="../../images/eea-print-logo.gif" th:src="@{/images/eea-print-logo.gif}" alt="Logo" id="logo" width="428" height="87"/>
           </a>
-          <div id="networktitle">Eionet</div>
+          <div id="networktitle">E-PRTR</div>
           <div id="sitetitle">European Environment Information and Observation Network</div>
           <div id="sitetagline">Networking improving Europe's environment</div>
         </div>
@@ -90,33 +90,63 @@
             <ul>
               <li><a href="index.html" th:href="@{/}">Home</a></li>
               <li><a href="about.html" th:href="@{/about}">About E-PRTR</a></li>
+              <li><a href="#">Search E-PRTR data</a>
+                  <ul>
+                  <li><a href="facilities.html" th:href="@{/facilities}">Facility Level</a></li>
+                  <li><a href="#">Industrial Activity</a></li>
+                  <li><a href="#">Area Overview</a></li>
+                  <li><a href="#">Pollutant Releases</a></li>
+                  <li><a href="#">Waste Transfers</a></li>
+                  <li><a href="#">Map Search</a></li>
+                  </ul></li>
+              <li><a href="diffusesourcesapproach.html" th:href="@{/diffusesourcesapproach}">Releases Diffuse Sources</a>
+                  <ul>
+                  <li><a href="diffusesourcesapproach.html" th:href="@{/diffusesourcesapproach}">Approach</a></li>
+                  <li><a href="diffusesourceswater.html" th:href="@{/diffusesourceswater}">Releases to water</a></li>
+                  <li><a href="diffusesourcesair.html" th:href="@{/diffusesourcesair}">Releases to water</a></li>
+                  </ul></li>
               <li><a href="faq.html" th:href="@{/faq}">Questions to E-PRTR</a></li>
               <li><a href="users.html" th:href="@{/users}">List users</a></li>
-              <li><a href="facilities.html" th:href="@{/facilities}">List facilities</a></li>
             </ul>
           </div>
         </div>
       </div>
       <div id="workarea">
         <h1 th:text="${title}">Page title here</h1>
-        <p>
-Collaboratively administrate empowered markets via plug-and-play
-networks. Dynamically procrastinate B2C users after installed base
-benefits. Dramatically visualize customer directed convergence without
-revolutionary ROI.
-        </p>
-        <p>
-Efficiently unleash cross-media information without cross-media
-value. Quickly maximize timely deliverables for real-time
-schemas. Dramatically maintain clicks-and-mortar solutions without
-functional solutions.
-        </p>
-        <p>
+<p>
+Technologies turn-key reinvent <a href="http://bullshitipsum.com/?paragraphs=5">portals synergies interfaces</a>,
+"next-generation," folksonomies, compelling deploy, syndicate integrated
+brand relationships ubiquitous B2B tagclouds. Generate enable technologies
+sexy wireless, user-centred e-enable, "bleeding-edge functionalities,"
+streamline viral, e-business exploit widgets evolve e-business
+productize create. Bleeding-edge incentivize reinvent, synthesize
+innovate syndicate. Real-time viral transform maximize disintermediate
+value-added maximize iterate channels podcasting eyeballs implement
+disintermediate mindshare intuitive innovative rss-capable compelling
+web services podcasts best-of-breed. Engage applications.
+</p>
+<h2>Level 2 heading</h2>
+<p>
+Webservices cutting-edge ubiquitous e-markets one-to-one matrix
+world-class reintermediate folksonomies disintermediate 24/365 e-business
+world-class viral partnerships A-list: synergistic dot-com e-markets
+grow A-list redefine. Web-enabled metrics communities redefine monetize
+web-readiness e-services unleash, real-time, content communities value
+recontextualize architect.
+</p>
+<h3>Level 3 heading</h3>
+<p>
 Completely synergize resource sucking relationships via premier niche
 markets. Professionally cultivate one-to-one customer service with robust
 ideas. Dynamically innovate resource-leveling customer service for state
 of the art customer service.
-        </p>
+</p>
+<h4>List</h4>
+<ul>
+  <li>Oranges</li>
+  <li>Pears</li>
+</ul>
+
       </div>
       <!-- workarea -->
     </div>

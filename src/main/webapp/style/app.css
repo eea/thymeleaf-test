@@ -1,10 +1,10 @@
 table {
     border: 1px solid black;
 }
-body tr:nth-child(odd)  {
+tbody tr:nth-child(odd)  {
     background-color: #eee;
 }
-body tr:nth-child(even) {
+tbody tr:nth-child(even) {
     background-color: #fff;
 }
 
