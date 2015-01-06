@@ -23,3 +23,19 @@ There are test examples of both controllers and data access objects using the Sp
 Note that loading demo data is part of the liquibase changelog, and the tests use that data instead
 of initialising with their own test data.
 
+How to build
+------------
+You need Git to check the code out from the repository and to build you need Java and Maven.  All other dependencies will automatically be downloaded by Maven.
+
+For Windows see the pages on:
+* [Git for Windows](http://git-scm.com/downloads)
+* [Maven for Windows](http://maven.apache.org/guides/getting-started/windows-prerequisites.html).
+
+To build you do:
+```
+git clone https://github.com/eea/thymeleaf-test.git
+cd thymeleaf-test
+mvn.bat install
+```
+
+This will create a `target` subdirectory, build the code, run the tests and put a WAR file in target. You can then deploy this file to Tomcat. It contains an embedded database with demo data.
