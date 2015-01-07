@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head th:include="layout :: headerFragment">
+  <link href="../../style/app.css" th:href="@{/style/app.css}" rel="stylesheet"/>
+  </head>
+  <body>
+    <div id="container">
+      <div th:include="layout :: bannerFragment">
+      </div>
+      <div id="workarea">
+        <h1 th:text="${title}">Page title</h1>
+        <form action="#" method="post" th:action="@{/facilitylevels}" th:object="${facilitySearchForm}">
+            <div>
+                <label for="country">Country</label> 
+                <select th:field="*{country}" th:remove="all-but-first">
+                    <option value="-1"
+                    th:each="country : ${allCountries}" th:value="${country.code}" th:text="${country.name}">All Reporting States</option>
+                    <option value="-2">EU15</option>
+                    <option value="-3">EU25</option>
+                    <option value="-4">EU27</option>
+                    <option value="15">Austria</option>
+                </select>
+            </div>
+            <div>
+                <label for="rbd">River basin district</label>
+                <select name="region" id="rbd">
+                    <option selected="selected" value="-1">All river basin districts</option>
+                </select>
+            </div>
+            <div>
+                <label for="year">Year</label>
+                <select th:field="*{year}">
+                    <option th:each="year : ${allYears}" th:value="${year.code}" th:text="${year.name}">2007</option>
+                </select>
+            </div>
+            <div>
+                <label for="facilityname">Facility Name</label>
+                <input type="text" name="facilityname" id="facilityname"/>
+            </div>
+            <div>
+                <label for="village">Town/village</label>
+                <input type="text" name="village" id="village"/>
+            </div>
+            <div>
+                <input type="submit" name="search" value="Search"/>
+            </div>
+        </form>
+      </div>
+    </div>
+    <!-- container -->
+    <div id="pagefoot" th:include="layout :: footerFragment">
+    Footer
+    </div>
+  </body>
+</html>
