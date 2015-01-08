@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head th:include="layout :: headerFragment">
+  </head>
+  <body>
+    <div id="container">
+      <div th:include="layout :: bannerFragment">
+      </div>
+      <div id="workarea">
+        <h1 th:text="${title}">Page title</h1>
+        <form action="uploadSuccess.html" th:action="@{/fileupload}" method="post" enctype="multipart/form-data">
+          <label for="file">Select a file to upload</label>
+          <input type="file" name="file" id="file"/>
+          <input type="submit" value="Upload" />
+        </form>
+      </div>
+    </div> <!-- container -->
+    <div id="pagefoot" th:include="layout :: footerFragment">
+    Footer
+    </div>
+  </body>
+</html>

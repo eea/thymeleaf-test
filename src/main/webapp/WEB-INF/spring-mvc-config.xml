@@ -46,12 +46,7 @@
 		<property name="viewNames" value="*" />
 	</bean>
 
-	<!-- Resolves view names to protected .jsp resources within the /WEB-INF/views directory -->
-        <!--
-	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
-		<property name="prefix" value="/WEB-INF/jsp/"/>
-		<property name="suffix" value=".jspx"/>
-		<property name="order" value="2"/>
-	</bean>
-        -->
+        <bean id="multipartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver">
+        </bean>
+
 </beans>
