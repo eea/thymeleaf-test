@@ -18,7 +18,7 @@
         <init-param>
             <param-name>contextConfigLocation</param-name>
             <param-value>
-                /WEB-INF/spring-*-config.xml
+                /WEB-INF/classes/spring-*-config.xml
             </param-value>
         </init-param>
         <multipart-config>

@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import eea.eprtr.model.FacilityName;
+import org.springframework.stereotype.Component;
 
 public class FacilityServiceDummy implements FacilityService {
 

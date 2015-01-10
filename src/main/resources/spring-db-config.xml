@@ -31,4 +31,5 @@
 
         <bean id="facilityService" class="eea.eprtr.dao.FacilityServiceDummy">
         </bean>
+
 </beans>
