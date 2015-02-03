@@ -165,14 +165,14 @@
       <column name="ContentsGroupID" valueNumeric="2"/>
       <column name="CreatedDate" valueDate="2010-03-17T00:00:00"/>
     </insert>
-
     <insert tableName="ReviseResourceValue">
-      <column name="ResourceValueID" valueNumeric="2"/>
-      <column name="ResourceKeyID" valueNumeric="2"/>
+      <column name="ResourceValueID" value="2"/>
+      <column name="ResourceKeyID" value="2"/>
       <column name="CultureCode" value="en-GB"/>
       <column name="ResourceValue" valueClobFile="index.content" encoding="UTF-8"/>
       <column name="ChangedDate" valueDate="2013-03-17T09:39:01"/>
     </insert>
+
     <insert tableName="ReviseResourceKey">
       <column name="ResourceKeyID" valueNumeric="3"/>
       <column name="ResourceKey" value="AboutPageContent"/>
@@ -184,8 +184,8 @@
       <column name="CreatedDate" valueDate="2010-03-17T00:00:00"/>
    </insert>
     <insert tableName="ReviseResourceValue">
-      <column name="ResourceValueID" valueNumeric="3"/>
-      <column name="ResourceKeyID" valueNumeric="3"/>
+      <column name="ResourceValueID" value="3"/>
+      <column name="ResourceKeyID" value="3"/>
       <column name="CultureCode" value="en-GB"/>
       <column name="ResourceValue" valueClobFile="about.content" encoding="UTF-8"/>
       <column name="ChangedDate" valueDate="2013-03-17T09:39:01"/>
@@ -202,8 +202,8 @@
       <column name="CreatedDate" valueDate="2010-03-17T00:00:00"/>
    </insert>
     <insert tableName="ReviseResourceValue">
-      <column name="ResourceValueID" valueNumeric="4"/>
-      <column name="ResourceKeyID" valueNumeric="13"/>
+      <column name="ResourceValueID" value="4"/>
+      <column name="ResourceKeyID" value="13"/>
       <column name="CultureCode" value="en-GB"/>
       <column name="ResourceValue" valueClobFile="faq.content" encoding="UTF-8"/>
       <column name="ChangedDate" valueDate="2013-03-17T09:39:01"/>
@@ -220,8 +220,8 @@
       <column name="CreatedDate" valueDate="2010-03-17T00:00:00"/>
    </insert>
     <insert tableName="ReviseResourceValue">
-      <column name="ResourceValueID" valueNumeric="5"/>
-      <column name="ResourceKeyID" valueNumeric="60"/>
+      <column name="ResourceValueID" value="5"/>
+      <column name="ResourceKeyID" value="60"/>
       <column name="CultureCode" value="en-GB"/>
       <column name="ResourceValue" valueClobFile="diffusesourcesapproach.content" encoding="UTF-8"/>
       <column name="ChangedDate" valueDate="2013-03-17T09:39:01"/>

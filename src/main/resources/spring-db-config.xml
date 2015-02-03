@@ -16,7 +16,7 @@
         <!-- Run database refactorings at startup using Liquibase -->
         <bean id="liquibase" class="liquibase.integration.spring.SpringLiquibase">
                 <property name="dataSource" ref="dataSource" />
-                <property name="changeLog" value="classpath:database/CMS.xml" />
+                <property name="changeLog" value="classpath:database/eprtr_cms.xml" />
                 <!-- <property name="changeLog" value="classpath:database/changelog-master.xml" /> -->
 
               <!-- contexts specifies the runtime contexts to use.  -->

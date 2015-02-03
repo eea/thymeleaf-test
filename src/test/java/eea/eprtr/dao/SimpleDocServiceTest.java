@@ -27,7 +27,7 @@ public class SimpleDocServiceTest {
         doc.setContent("Java Developer");
          
         //Read
-        SimpleDoc doc1 = simpledocService.getByName("about");
+        SimpleDoc doc1 = simpledocService.getByName("AboutPageContent");
         assertNotNull(doc1);
          
         //Get All

@@ -23,7 +23,9 @@ public class SimpleDocServiceJdbc implements SimpleDocService {
 
     @Override
     public SimpleDoc getByName(String name) {
-        String query = "select NAME, TITLE, CONTENT from PAGES where NAME = ?";
+        String query = "SELECT ResourceKey, KeyTitle, ResourceValue FROM ReviseResourceKey"
+            + " JOIN ReviseResourceValue ON ReviseResourceKey.ResourceKeyID = ReviseResourceValue.ResourceKeyID"
+            + " AND CultureCode='en-GB' WHERE ResourceKey = ?";
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 
         //using RowMapper anonymous class, we can create a separate RowMapper for reuse
@@ -33,9 +35,9 @@ public class SimpleDocServiceJdbc implements SimpleDocService {
             public SimpleDoc mapRow(ResultSet rs, int rowNum)
                     throws SQLException {
                 SimpleDoc doc = new SimpleDoc();
-                doc.setName(rs.getString("NAME"));
-                doc.setTitle(rs.getString("TITLE"));
-                doc.setContent(rs.getString("CONTENT"));
+                doc.setName(rs.getString("ResourceKey"));
+                doc.setTitle(rs.getString("KeyTitle"));
+                doc.setContent(rs.getString("ResourceValue"));
                 return doc;
             }});
 
@@ -44,7 +46,9 @@ public class SimpleDocServiceJdbc implements SimpleDocService {
 
     @Override
     public List<SimpleDoc> getAll() {
-        String query = "select NAME, TITLE, CONTENT from PAGES";
+        String query = "SELECT ResourceKey, KeyTitle, ResourceValue FROM ReviseResourceKey"
+            + " JOIN ReviseResourceValue ON ReviseResourceKey.ResourceKeyID = ReviseResourceValue.ResourceKeyID"
+            + " AND CultureCode='en-GB'";
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
         List<SimpleDoc> docList = new ArrayList<SimpleDoc>();
 
@@ -52,9 +56,9 @@ public class SimpleDocServiceJdbc implements SimpleDocService {
 
         for(Map<String, Object> docRow : docRows){
             SimpleDoc doc = new SimpleDoc();
-            doc.setName(String.valueOf(docRow.get("NAME")));
-            doc.setTitle(String.valueOf(docRow.get("TITLE")));
-            doc.setContent(String.valueOf(docRow.get("CONTENT")));
+            doc.setName(String.valueOf(docRow.get("ResourceKey")));
+            doc.setTitle(String.valueOf(docRow.get("KeyTitle")));
+            doc.setContent(String.valueOf(docRow.get("ResourceValue")));
             docList.add(doc);
         }
         return docList;

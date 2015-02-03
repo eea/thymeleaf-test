@@ -29,7 +29,7 @@ public class SimpleDocController {
      */
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String frontpage(Model model) {
-        loadFromDB("index", model);
+        loadFromDB("HomeWelcomeText", model);
         // This is toplevel. No breadcrumbs.
         BreadCrumbs.set(model);
         return "simplecontent";
@@ -51,7 +51,7 @@ public class SimpleDocController {
      */
     @RequestMapping(value = "/about", method = RequestMethod.GET)
     public String about(Model model) {
-        loadFromDB("about", model);
+        loadFromDB("AboutPageContent", model);
         return "simplecontent";
     }
 
@@ -60,7 +60,7 @@ public class SimpleDocController {
      */
     @RequestMapping(value = "/faq", method = RequestMethod.GET)
     public String faq(Model model) {
-        loadFromDB("faq", model);
+        loadFromDB("FAQPageContent", model);
         return "simplecontent";
     }
 
@@ -69,7 +69,7 @@ public class SimpleDocController {
      */
     @RequestMapping(value = "/diffusesourcesapproach", method = RequestMethod.GET)
     public String diffuseSourcesApproach(Model model) {
-        loadFromDB("diffusesourcesapproach", model);
+        loadFromDB("Approach", model);
         return "simplecontent";
     }
 
