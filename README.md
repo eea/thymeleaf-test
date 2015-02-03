@@ -17,6 +17,10 @@ Dependencies
 * Thymeleaf 2.1.4
 * H2 Database Engine
 
+Features
+--------
+The rich text editor was implemented with [CKEditor](http://ckeditor.com/). The package was downloaded and placed in src/main/webapp/scripts.
+
 Automated tests
 ---------------
 There are test examples of both controllers and data access objects using the Spring test package.

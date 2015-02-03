@@ -9,6 +9,7 @@ import java.util.Properties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -70,6 +71,18 @@ public class SimpleDocController {
     public String diffuseSourcesApproach(Model model) {
         loadFromDB("diffusesourcesapproach", model);
         return "simplecontent";
+    }
+
+    /**
+     * TODO: Add param
+     */
+    @RequestMapping(value = "/{page}/edit", method = RequestMethod.GET)
+    public String editpage(@PathVariable String page, Model model) {
+        SimpleDoc doc = simpleDocService.getByName(page);
+        model.addAttribute("pagetitle", doc.getTitle());
+        model.addAttribute("content", doc.getContent());
+        model.addAttribute("title", "Edit page");
+        return "editpage";
     }
 
     private void loadFromDB(String name, Model model) {
