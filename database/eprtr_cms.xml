@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+  <!--
+     You can run this change log on your database as many times as you want, it will ignore the
+     changes that are already applied. It also means that you can't modify an existing revision.
+     Always add to the end.
+
+     Use the maven goals: liquibase:update and liquibase:status
+      Potentially with -Dliquibase.dropFirst=true
+ -->
+
+  <changeSet author="roug" id="rev-1">
+    <createTable tableName="LOV_ContentsGroup">
+      <column name="LOV_ContentsGroupID" type="int" autoIncrement="true">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+      <column name="Code" type="varchar(255)">
+        <constraints unique="true" uniqueConstraintName="LOV_ContentsGroup_code_unique" nullable="false"/>
+      </column>
+      <column name="Name" type="varchar(255)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="StartYear" type="int">
+        <constraints nullable="true"/>
+      </column>
+      <column name="EndYear" type="int">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-2">
+    <createTable tableName="LOV_Culture">
+      <column name="LOV_CultureID" type="int" autoIncrement="true">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+      <column name="EnglishName" type="varchar(255)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="Code" type="varchar(255)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="CodeXliff" type="varchar(255)">
+        <constraints nullable="true"/>
+      </column>
+      <column name="CodeAEAT" type="varchar(255)">
+        <constraints nullable="true"/>
+      </column>
+      <column name="Name" type="varchar(255)">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-3">
+    <createTable tableName="ReviseResourceKey">
+      <column name="ResourceKeyID" type="int" autoIncrement="true">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+      <column name="ResourceKey" type="varchar(200)">
+        <constraints nullable="true"/>
+      </column>
+      <column name="ResourceType" type="varchar(250)">
+        <constraints nullable="true"/>
+      </column>
+      <column name="AllowHTML" type="BOOLEAN">
+        <constraints nullable="false"/>
+      </column>
+      <column name="KeyDescription" type="varchar(255)">
+        <constraints nullable="true"/>
+      </column>
+      <column name="KeyTitle" type="varchar(255)">
+        <constraints nullable="true"/>
+      </column>
+      <column name="ContentsGroupID" type="int">
+        <constraints nullable="true"/>
+      </column>
+      <column name="CreatedDate" type="DATETIME">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+    <addUniqueConstraint tableName="ReviseResourceKey"
+        constraintName="ResourceKeyTypeUnique"
+        columnNames="ResourceKey, ResourceType"/>
+    <addUniqueConstraint tableName="ReviseResourceKey"
+        constraintName="ReviseResourceKey_unique"
+        columnNames="ResourceType, ResourceKey"/>
+    <addForeignKeyConstraint
+        constraintName="FK_ReviseResourceKey_LOV_WASTETYPE_LOV_ContentsGroup"
+        baseTableName="ReviseResourceKey"
+        baseColumnNames="ContentsGroupID"
+        referencedTableName="LOV_ContentsGroup"
+        referencedColumnNames="LOV_ContentsGroupID"
+        onDelete="RESTRICT" onUpdate="RESTRICT"/>
+        <!--
+        baseTableSchemaName="EPRTRcms"
+        referencedTableSchemaName="EPRTRcms"
+        -->
+  </changeSet>
+
+  <changeSet author="roug" id="rev-4">
+    <createTable tableName="ReviseResourceValue">
+      <column name="ResourceValueID" type="int" autoIncrement="true">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+      <column name="ResourceKeyID" type="int">
+        <constraints nullable="false"/>
+      </column>
+      <column name="CultureCode" type="varchar(10)">
+        <constraints nullable="true"/>
+      </column>
+      <column name="ResourceValue" type="text">
+      </column>
+      <column name="ChangedDate" type="DATETIME">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+
+<!-- DEMO DATA -->
+  <changeSet author="roug" id="rev-200" context="demo">
+    <comment>Load some demo data</comment>
+
+    <insert tableName="LOV_ContentsGroup">
+      <column name="LOV_ContentsGroupID" valueNumeric="1"/>
+      <column name="Code" value="DCL"/>
+      <column name="Name" value="Disclaimer Texts"/>
+      <column name="StartYear" valueNumeric="2007"/>
+    </insert>
+    <insert tableName="LOV_ContentsGroup">
+      <column name="LOV_ContentsGroupID" valueNumeric="2"/>
+      <column name="Code" value="STP"/>
+      <column name="Name" value="Static Pages"/>
+      <column name="StartYear" valueNumeric="2007"/>
+    </insert>
+
+    <insert tableName="LOV_Culture">
+      <column name="LOV_CultureID" valueNumeric="4"/>
+      <column name="EnglishName" value="Dutch"/>
+      <column name="Code" value="nl-NL"/>
+      <column name="CodeXliff" value="nl"/>
+      <column name="CodeAEAT" value="nl"/>
+      <column name="Name" value="Nederlandse"/>
+    </insert>
+
+    <insert tableName="LOV_Culture">
+      <column name="LOV_CultureID" valueNumeric="5"/>
+      <column name="EnglishName" value="English"/>
+      <column name="Code" value="en-GB"/>
+      <column name="CodeXliff" value="en"/>
+      <column name="CodeAEAT" value="en"/>
+      <column name="Name" value="English"/>
+    </insert>
+
+    <insert tableName="ReviseResourceKey">
+      <column name="ResourceKeyID" valueNumeric="2"/>
+      <column name="ResourceKey" value="HomeWelcomeText"/>
+      <column name="ResourceType" value="Static"/>
+      <column name="AllowHTML" valueBoolean="true"/>
+      <column name="KeyDescription" value=""/>
+      <column name="KeyTitle" value="Welcome to E-PRTR"/>
+      <column name="ContentsGroupID" valueNumeric="2"/>
+      <column name="CreatedDate" valueDate="2010-03-17T00:00:00"/>
+    </insert>
+
+    <insert tableName="ReviseResourceValue">
+      <column name="ResourceValueID" valueNumeric="2"/>
+      <column name="ResourceKeyID" valueNumeric="2"/>
+      <column name="CultureCode" value="en-GB"/>
+      <column name="ResourceValue" valueClobFile="index.content" encoding="UTF-8"/>
+      <column name="ChangedDate" valueDate="2013-03-17T09:39:01"/>
+    </insert>
+    <insert tableName="ReviseResourceKey">
+      <column name="ResourceKeyID" valueNumeric="3"/>
+      <column name="ResourceKey" value="AboutPageContent"/>
+      <column name="ResourceType" value="Static"/>
+      <column name="AllowHTML" valueBoolean="true"/>
+      <column name="KeyDescription" value=""/>
+      <column name="KeyTitle" value="About E-PRTR"/>
+      <column name="ContentsGroupID" valueNumeric="2"/>
+      <column name="CreatedDate" valueDate="2010-03-17T00:00:00"/>
+   </insert>
+    <insert tableName="ReviseResourceValue">
+      <column name="ResourceValueID" valueNumeric="3"/>
+      <column name="ResourceKeyID" valueNumeric="3"/>
+      <column name="CultureCode" value="en-GB"/>
+      <column name="ResourceValue" valueClobFile="about.content" encoding="UTF-8"/>
+      <column name="ChangedDate" valueDate="2013-03-17T09:39:01"/>
+    </insert>
+
+    <insert tableName="ReviseResourceKey">
+      <column name="ResourceKeyID" valueNumeric="13"/>
+      <column name="ResourceKey" value="FAQPageContent"/>
+      <column name="ResourceType" value="Static"/>
+      <column name="AllowHTML" valueBoolean="true"/>
+      <column name="KeyDescription" value=""/>
+      <column name="KeyTitle" value="Frequently Asked Questions"/>
+      <column name="ContentsGroupID" valueNumeric="2"/>
+      <column name="CreatedDate" valueDate="2010-03-17T00:00:00"/>
+   </insert>
+    <insert tableName="ReviseResourceValue">
+      <column name="ResourceValueID" valueNumeric="4"/>
+      <column name="ResourceKeyID" valueNumeric="13"/>
+      <column name="CultureCode" value="en-GB"/>
+      <column name="ResourceValue" valueClobFile="faq.content" encoding="UTF-8"/>
+      <column name="ChangedDate" valueDate="2013-03-17T09:39:01"/>
+    </insert>
+
+    <insert tableName="ReviseResourceKey">
+      <column name="ResourceKeyID" valueNumeric="60"/>
+      <column name="ResourceKey" value="Approach"/>
+      <column name="ResourceType" value="Static"/>
+      <column name="AllowHTML" valueBoolean="true"/>
+      <column name="KeyDescription" value="Page describing the approach for diffuse sources"/>
+      <column name="KeyTitle" value="Releases from Diffuse Sources - Approach"/>
+      <column name="ContentsGroupID" valueNumeric="2"/>
+      <column name="CreatedDate" valueDate="2010-03-17T00:00:00"/>
+   </insert>
+    <insert tableName="ReviseResourceValue">
+      <column name="ResourceValueID" valueNumeric="5"/>
+      <column name="ResourceKeyID" valueNumeric="60"/>
+      <column name="CultureCode" value="en-GB"/>
+      <column name="ResourceValue" valueClobFile="diffusesourcesapproach.content" encoding="UTF-8"/>
+      <column name="ChangedDate" valueDate="2013-03-17T09:39:01"/>
+    </insert>
+
+  </changeSet>
+
+</databaseChangeLog>
