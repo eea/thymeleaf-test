@@ -1,0 +1,250 @@
+LOV_CountryID,Code,Name,StartYear,EndYear
+1,AF,Afghanistan,2001,NULL
+2,AX,Åland Islands,2001,NULL
+3,AL,Albania,2001,NULL
+4,DZ,Algeria,2001,NULL
+5,AS,American Samoa,2001,NULL
+6,AD,Andorra,2001,NULL
+7,AO,Angola,2001,NULL
+8,AI,Anguilla,2001,NULL
+9,AQ,Antarctica,2001,NULL
+10,AG,Antigua and Barbuda,2001,NULL
+11,AR,Argentina,2001,NULL
+12,AM,Armenia,2001,NULL
+13,AW,Aruba,2001,NULL
+14,AU,Australia,2001,NULL
+15,AT,Austria,2001,NULL
+16,AZ,Azerbaijan,2001,NULL
+17,BS,Bahamas,2001,NULL
+18,BH,Bahrain,2001,NULL
+19,BD,Bangladesh,2001,NULL
+20,BB,Barbados,2001,NULL
+21,BY,Belarus,2001,NULL
+22,BE,Belgium,2001,NULL
+23,BZ,Belize,2001,NULL
+24,BJ,Benin,2001,NULL
+25,BM,Bermuda,2001,NULL
+26,BT,Bhutan,2001,NULL
+27,BO,Bolivia,2001,NULL
+28,BA,Bosnia and Herzegovina,2001,NULL
+29,BW,Botswana,2001,NULL
+30,BV,Bouvet Island,2001,NULL
+31,BR,Brazil,2001,NULL
+32,IO,British Indian Ocean Territory,2001,NULL
+33,BN,Brunei Darussalam,2001,NULL
+34,BG,Bulgaria,2001,NULL
+35,BF,Burkina Faso,2001,NULL
+36,BI,Burundi,2001,NULL
+37,KH,Cambodia,2001,NULL
+38,CM,Cameroon,2001,NULL
+39,CA,Canada,2001,NULL
+40,CV,Cape Verde,2001,NULL
+41,KY,Cayman Islands,2001,NULL
+42,CF,Central African Republic,2001,NULL
+43,TD,Chad,2001,NULL
+44,CL,Chile,2001,NULL
+45,CN,China,2001,NULL
+46,CX,Christmas Island,2001,NULL
+47,CC,Cocos (Keeling) Islands,2001,NULL
+48,CO,Colombia,2001,NULL
+49,KM,Comoros,2001,NULL
+50,CG,Congo,2001,NULL
+51,CD,"Congo, the Democratic Republic of the",2001,NULL
+52,CK,Cook Islands,2001,NULL
+53,CR,Costa Rica,2001,NULL
+54,CI,Côte d'Ivoire,2001,NULL
+55,HR,Croatia,2001,NULL
+56,CU,Cuba,2001,NULL
+57,CY,Cyprus,2001,NULL
+58,CZ,Czech Republic,2001,NULL
+59,DK,Denmark,2001,NULL
+60,DJ,Djibouti,2001,NULL
+61,DM,Dominica,2001,NULL
+62,DO,Dominican Republic,2001,NULL
+63,EC,Ecuador,2001,NULL
+64,EG,Egypt,2001,NULL
+65,SV,El Salvador,2001,NULL
+66,GQ,Equatorial Guinea,2001,NULL
+67,ER,Eritrea,2001,NULL
+68,EE,Estonia,2001,NULL
+69,ET,Ethiopia,2001,NULL
+70,FK,Falkland Islands (Malvinas),2001,NULL
+71,FO,Faroe Islands,2001,NULL
+72,FJ,Fiji,2001,NULL
+73,FI,Finland,2001,NULL
+74,FR,France,2001,NULL
+75,GF,French Guiana,2001,NULL
+76,PF,French Polynesia,2001,NULL
+77,TF,French Southern Territories,2001,NULL
+78,GA,Gabon,2001,NULL
+79,GM,Gambia,2001,NULL
+80,GE,Georgia,2001,NULL
+81,DE,Germany,2001,NULL
+82,GH,Ghana,2001,NULL
+83,GI,Gibraltar,2001,NULL
+84,EL,Greece,2001,NULL
+85,GR,Greece,2001,NULL
+86,GL,Greenland,2001,NULL
+87,GD,Grenada,2001,NULL
+88,GP,Guadeloupe,2001,NULL
+89,GU,Guam,2001,NULL
+90,GT,Guatemala,2001,NULL
+91,GG,Guernsey,2001,NULL
+92,GN,Guinea,2001,NULL
+93,GW,Guinea-Bissau,2001,NULL
+94,GY,Guyana,2001,NULL
+95,HT,Haiti,2001,NULL
+96,HM,Heard Island and McDonald Islands,2001,NULL
+97,VA,Holy See (Vatican City State),2001,NULL
+98,HN,Honduras,2001,NULL
+99,HK,Hong Kong,2001,NULL
+100,HU,Hungary,2001,NULL
+101,IS,Iceland,2001,NULL
+102,IN,India,2001,NULL
+103,ID,Indonesia,2001,NULL
+104,IR,"Iran, Islamic Republic of",2001,NULL
+105,IQ,Iraq,2001,NULL
+106,IE,Ireland,2001,NULL
+107,IM,Isle Of Man,2001,NULL
+108,IL,Israel,2001,NULL
+109,IT,Italy,2001,NULL
+110,JM,Jamaica,2001,NULL
+111,JP,Japan,2001,NULL
+112,JE,Jersey,2001,NULL
+113,JO,Jordan,2001,NULL
+114,KZ,Kazakhstan,2001,NULL
+115,KE,Kenya,2001,NULL
+116,KI,Kiribati,2001,NULL
+117,KP,"Korea, Democratic People's Republic of",2001,NULL
+118,KR,"Korea, Republic of",2001,NULL
+119,KW,Kuwait,2001,NULL
+120,KG,Kyrgyzstan,2001,NULL
+121,LA,Lao People's Democratic Republic,2001,NULL
+122,LV,Latvia,2001,NULL
+123,LB,Lebanon,2001,NULL
+124,LS,Lesotho,2001,NULL
+125,LR,Liberia,2001,NULL
+126,LY,Libyan Arab Jamahiriya,2001,NULL
+127,LI,Liechtenstein,2001,NULL
+128,LT,Lithuania,2001,NULL
+129,LU,Luxembourg,2001,NULL
+130,MO,Macao,2001,NULL
+131,MK,"Macedonia, the Former Yugoslav Republic of",2001,NULL
+132,MG,Madagascar,2001,NULL
+133,MW,Malawi,2001,NULL
+134,MY,Malaysia,2001,NULL
+135,MV,Maldives,2001,NULL
+136,ML,Mali,2001,NULL
+137,MT,Malta,2001,NULL
+138,MH,Marshall Islands,2001,NULL
+139,MQ,Martinique,2001,NULL
+140,MR,Mauritania,2001,NULL
+141,MU,Mauritius,2001,NULL
+142,YT,Mayotte,2001,NULL
+143,MX,Mexico,2001,NULL
+144,FM,"Micronesia, Federated States of",2001,NULL
+145,MD,"Moldova, Republic of",2001,NULL
+146,MC,Monaco,2001,NULL
+147,MN,Mongolia,2001,NULL
+148,ME,Montenegro,2001,NULL
+149,MS,Montserrat,2001,NULL
+150,MA,Morocco,2001,NULL
+151,MZ,Mozambique,2001,NULL
+152,MM,Myanmar,2001,NULL
+153,NA,Namibia,2001,NULL
+154,NR,Nauru,2001,NULL
+155,NP,Nepal,2001,NULL
+156,NL,Netherlands,2001,NULL
+157,AN,Netherlands Antilles,2001,NULL
+158,NC,New Caledonia,2001,NULL
+159,NZ,New Zealand,2001,NULL
+160,NI,Nicaragua,2001,NULL
+161,NE,Niger,2001,NULL
+162,NG,Nigeria,2001,NULL
+163,NU,Niue,2001,NULL
+164,NF,Norfolk Island,2001,NULL
+165,MP,Northern Mariana Islands,2001,NULL
+166,NO,Norway,2001,NULL
+167,OM,Oman,2001,NULL
+168,PK,Pakistan,2001,NULL
+169,PW,Palau,2001,NULL
+170,PS,"Palestinian Territory, Occupied",2001,NULL
+171,PA,Panama,2001,NULL
+172,PG,Papua New Guinea,2001,NULL
+173,PY,Paraguay,2001,NULL
+174,PE,Peru,2001,NULL
+175,PH,Philippines,2001,NULL
+176,PN,Pitcairn,2001,NULL
+177,PL,Poland,2001,NULL
+178,PT,Portugal,2001,NULL
+179,PR,Puerto Rico,2001,NULL
+180,QA,Qatar,2001,NULL
+181,RE,Reunion,2001,NULL
+182,RO,Romania,2001,NULL
+183,RU,Russian Federation,2001,NULL
+184,RW,Rwanda,2001,NULL
+185,BL,Saint Barthélemy,2001,NULL
+186,SH,Saint Helena,2001,NULL
+187,KN,Saint Kitts and Nevis,2001,NULL
+188,LC,Saint Lucia,2001,NULL
+189,MF,Saint Martin,2001,NULL
+190,PM,Saint Pierre and Miquelon,2001,NULL
+191,VC,Saint Vincent and the Grenadines,2001,NULL
+192,WS,Samoa,2001,NULL
+193,SM,San Marino,2001,NULL
+194,ST,Sao Tome and Principe,2001,NULL
+195,SA,Saudi Arabia,2001,NULL
+196,SN,Senegal,2001,NULL
+197,RS,Serbia,2001,NULL
+198,SC,Seychelles,2001,NULL
+199,SL,Sierra Leone,2001,NULL
+200,SG,Singapore,2001,NULL
+201,SK,Slovakia,2001,NULL
+202,SI,Slovenia,2001,NULL
+203,SB,Solomon Islands,2001,NULL
+204,SO,Somalia,2001,NULL
+205,ZA,South Africa,2001,NULL
+206,GS,South Georgia and the South Sandwich Islands,2001,NULL
+207,ES,Spain,2001,NULL
+208,LK,Sri Lanka,2001,NULL
+209,SD,Sudan,2001,NULL
+210,SR,Suriname,2001,NULL
+211,SJ,Svalbard and Jan Mayen,2001,NULL
+212,SZ,Swaziland,2001,NULL
+213,SE,Sweden,2001,NULL
+214,CH,Switzerland,2001,NULL
+215,SY,Syrian Arab Republic,2001,NULL
+216,TW,"Taiwan, Province of China",2001,NULL
+217,TJ,Tajikistan,2001,NULL
+218,TZ,"Tanzania, United Republic of",2001,NULL
+219,TH,Thailand,2001,NULL
+220,TL,Timor-Leste,2001,NULL
+221,TG,Togo,2001,NULL
+222,TK,Tokelau,2001,NULL
+223,TO,Tonga,2001,NULL
+224,TT,Trinidad and Tobago,2001,NULL
+225,TN,Tunisia,2001,NULL
+226,TR,Turkey,2001,NULL
+227,TM,Turkmenistan,2001,NULL
+228,TC,Turks and Caicos Islands,2001,NULL
+229,TV,Tuvalu,2001,NULL
+230,UG,Uganda,2001,NULL
+231,UA,Ukraine,2001,NULL
+232,AE,United Arab Emirates,2001,NULL
+233,GB,United Kingdom,2001,NULL
+234,UK,United Kingdom,2001,NULL
+235,US,United States,2001,NULL
+236,UM,United States Minor Outlying Islands,2001,NULL
+237,UY,Uruguay,2001,NULL
+238,UZ,Uzbekistan,2001,NULL
+239,VU,Vanuatu,2001,NULL
+240,VE,Venezuela,2001,NULL
+241,VN,Viet Nam,2001,NULL
+242,VG,"Virgin Islands, British",2001,NULL
+243,VI,"Virgin Islands, U.S.",2001,NULL
+244,WF,Wallis and Futuna,2001,NULL
+245,EH,Western Sahara,2001,NULL
+246,YE,Yemen,2001,NULL
+247,ZM,Zambia,2001,NULL
+248,ZW,Zimbabwe,2001,NULL
+249,UNKNOWN,N/A,2001,NULL

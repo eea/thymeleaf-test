@@ -422,12 +422,8 @@
         <constraints unique="true"/>
       </column>
       <column name="Name" type="VARCHAR(255)"/>
-      <column name="StartYear" type="INT">
-        <constraints nullable="true"/>
-      </column>
-      <column name="EndYear" type="INT">
-        <constraints nullable="true"/>
-      </column>
+      <column name="StartYear" type="INT"/>
+      <column name="EndYear" type="INT"/>
     </createTable>
   </changeSet>
 

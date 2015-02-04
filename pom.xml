@@ -15,10 +15,7 @@
         <tiles.version>3.0.1</tiles.version>
         <thymeleaf.version>2.1.4.RELEASE</thymeleaf.version>
         <checkstyle.config.location>${basedir}/doc/checkstyle.xml</checkstyle.config.location>
-        <!--
         <liquibase.changeLogFile>database/changelog-master.xml</liquibase.changeLogFile>
-        -->
-        <liquibase.changeLogFile>database/eprtr_cms.xml</liquibase.changeLogFile>
     </properties>
 
     <version>2.0-SNAPSHOT</version>

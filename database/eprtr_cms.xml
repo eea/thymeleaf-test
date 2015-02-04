@@ -209,8 +209,8 @@ ON      k.NewsKeyID = v.NewsKeyID
     </createView>
   </changeSet>
 
-  <changeSet author="roug" id="rev-11">
-    <createView viewName="StringResource" dbms="h2,mssql">
+  <changeSet author="roug" id="rev-11" dbms="h2,mssql">
+    <createView viewName="StringResource">
 SELECT
         tAT_ResourceKey.ResourceType,
         tAT_ResourceKey.ResourceKey,
