@@ -29,6 +29,10 @@
                 <property name="dataSource" ref="dataSource" />
         </bean>
 
+        <bean id="countryService" class="eea.eprtr.dao.CountryServiceJdbc">
+                <property name="dataSource" ref="dataSource" />
+        </bean>
+
         <bean id="facilityService" class="eea.eprtr.dao.FacilityServiceDummy">
         </bean>
 

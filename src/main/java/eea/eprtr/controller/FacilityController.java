@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.HashMap;
 
 import eea.eprtr.dao.FacilityService;
+import eea.eprtr.dao.CountryService;
 import eea.eprtr.model.FacilityName;
 import eea.eprtr.model.FacilitySearchForm;
 import eea.eprtr.model.LOV;
@@ -25,6 +26,9 @@ public class FacilityController {
 
     @Autowired
     private FacilityService facilityService;
+
+    @Autowired
+    private CountryService countryService;
 
     @RequestMapping(value="/facilities", method=RequestMethod.GET)
     public String findFacilitiesThymeLeaf(Model model){
@@ -51,43 +55,11 @@ public class FacilityController {
      */
     @ModelAttribute("allCountries")
     public List<LOV> populateCountries() {
-        List<LOV> countries = new ArrayList<LOV>();
+        List<LOV> countries = countryService.getAll();
         countries.add(new LOV("-1", "All Reporting States for E-PRTR"));
         countries.add(new LOV("-2", "EU15"));
         countries.add(new LOV("-3", "EU25"));
         countries.add(new LOV("-4", "EU27"));
-        countries.add(new LOV("15", "Austria"));
-        countries.add(new LOV("22", "Belgium"));
-        countries.add(new LOV("34", "Bulgaria"));
-        countries.add(new LOV("57", "Cyprus"));
-        countries.add(new LOV("58", "Czech Republic"));
-        countries.add(new LOV("59", "Denmark"));
-        countries.add(new LOV("68", "Estonia"));
-        countries.add(new LOV("73", "Finland"));
-        countries.add(new LOV("74", "France"));
-        countries.add(new LOV("81", "Germany"));
-        countries.add(new LOV("84", "Greece"));
-        countries.add(new LOV("100", "Hungary"));
-        countries.add(new LOV("101", "Iceland"));
-        countries.add(new LOV("106", "Ireland"));
-        countries.add(new LOV("109", "Italy"));
-        countries.add(new LOV("122", "Latvia"));
-        countries.add(new LOV("127", "Liechtenstein"));
-        countries.add(new LOV("128", "Lithuania"));
-        countries.add(new LOV("129", "Luxembourg"));
-        countries.add(new LOV("137", "Malta"));
-        countries.add(new LOV("156", "Netherlands"));
-        countries.add(new LOV("166", "Norway"));
-        countries.add(new LOV("177", "Poland"));
-        countries.add(new LOV("178", "Portugal"));
-        countries.add(new LOV("182", "Romania"));
-        countries.add(new LOV("197", "Serbia"));
-        countries.add(new LOV("201", "Slovakia"));
-        countries.add(new LOV("202", "Slovenia"));
-        countries.add(new LOV("207", "Spain"));
-        countries.add(new LOV("213", "Sweden"));
-        countries.add(new LOV("214", "Switzerland"));
-        countries.add(new LOV("234", "United Kingdom"));
         return countries;
     }
 
