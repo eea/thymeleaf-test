@@ -59,27 +59,15 @@
       <column name="ResourceKeyID" type="int" autoIncrement="true">
         <constraints primaryKey="true" nullable="false"/>
       </column>
-      <column name="ResourceKey" type="varchar(200)">
-        <constraints nullable="true"/>
-      </column>
-      <column name="ResourceType" type="varchar(250)">
-        <constraints nullable="true"/>
-      </column>
+      <column name="ResourceKey" type="varchar(200)"/>  <!-- NOTE: ResourceKey type is inconsistent in DB -->
+      <column name="ResourceType" type="varchar(250)"/>
       <column name="AllowHTML" type="BOOLEAN">
         <constraints nullable="false"/>
       </column>
-      <column name="KeyDescription" type="varchar(255)">
-        <constraints nullable="true"/>
-      </column>
-      <column name="KeyTitle" type="varchar(255)">
-        <constraints nullable="true"/>
-      </column>
-      <column name="ContentsGroupID" type="int">
-        <constraints nullable="true"/>
-      </column>
-      <column name="CreatedDate" type="DATETIME">
-        <constraints nullable="true"/>
-      </column>
+      <column name="KeyDescription" type="varchar(255)"/>
+      <column name="KeyTitle" type="varchar(255)"/>
+      <column name="ContentsGroupID" type="int"/>
+      <column name="CreatedDate" type="DATETIME"/>
     </createTable>
     <addUniqueConstraint tableName="ReviseResourceKey"
         constraintName="ResourceKeyTypeUnique"
@@ -101,6 +89,20 @@
   </changeSet>
 
   <changeSet author="roug" id="rev-4">
+    <createTable tableName="ResourceValue_Historic">
+      <column name="ID" type="int" autoIncrement="true">
+        <constraints primaryKey="true" primaryKeyName="ResourceValue_Historic_ID" nullable="false"/>
+      </column>
+      <column name="TableID" type="int"/>
+      <column name="ResourceKey" type="text"/>
+      <column name="CultureCode" type="varchar(10)"/>
+      <column name="ResourceValue" type="text"/>
+      <column name="BodyText" type="text"/>
+      <column name="ChangedDate" type="DATETIME"/>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-5">
     <createTable tableName="ReviseResourceValue">
       <column name="ResourceValueID" type="int" autoIncrement="true">
         <constraints primaryKey="true" nullable="false"/>
@@ -108,15 +110,129 @@
       <column name="ResourceKeyID" type="int">
         <constraints nullable="false"/>
       </column>
-      <column name="CultureCode" type="varchar(10)">
-        <constraints nullable="true"/>
-      </column>
-      <column name="ResourceValue" type="text">
-      </column>
-      <column name="ChangedDate" type="DATETIME">
-        <constraints nullable="true"/>
-      </column>
+      <column name="CultureCode" type="varchar(10)"/>
+      <column name="ResourceValue" type="text"/>
+      <column name="ChangedDate" type="DATETIME"/>
     </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-6">
+    <createTable tableName="tAT_ResourceKey">
+      <column name="ResourceKeyID" type="int" autoIncrement="true">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+      <column name="ResourceKey" type="varchar(255)"/>
+      <column name="ResourceType" type="varchar(255)"/>
+      <column name="AllowHTML" type="BOOLEAN">
+        <constraints nullable="true"/>
+      </column>
+      <column name="EditCMS" type="BOOLEAN">
+        <constraints nullable="true"/>
+      </column>
+      <column name="KeyDescription" type="varchar(255)"/>
+      <column name="CreatedDate" type="DATETIME"/>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-7">
+    <createTable tableName="tAT_ResourceValue">
+      <column name="ResourceValueID" type="int" autoIncrement="true">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+      <column name="ResourceKeyID" type="int">
+        <constraints nullable="false"/>
+      </column>
+      <column name="CultureCode" type="varchar(10)"/>
+      <column name="ResourceValue" type="text"/>
+      <column name="ChangedDate" type="DATETIME"/>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-8">
+    <createTable tableName="NewsKey">
+      <column name="NewsKeyID" type="int" autoIncrement="true">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+      <column name="TopNewsIndicator" type="BOOLEAN">
+        <constraints nullable="false"/>
+      </column>
+      <column name="NewsDate" type="DATETIME">
+        <constraints nullable="false"/>
+      </column>
+      <column name="Visible" type="BOOLEAN">
+        <constraints nullable="false"/>
+      </column>
+      <column name="CreatedDate" type="DATETIME"/>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-9">
+    <createTable tableName="NewsValue">
+      <column name="NewsValueID" type="int" autoIncrement="true">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+      <column name="NewsKeyID" type="int">
+        <constraints nullable="false"/>
+      </column>
+      <column name="CultureCode" type="varchar(10)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="HeaderText" type="text">
+        <constraints nullable="false"/>
+      </column>
+      <column name="BodyText" type="text">
+        <constraints nullable="false"/>
+      </column>
+      <column name="AuthorName" type="text">
+        <constraints nullable="true"/>
+      </column>
+      <column name="CreateDate" type="DATETIME"/>
+      <column name="ChangedDate" type="DATETIME"/>
+    </createTable>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-10" dbms="h2,mssql">
+    <createView viewName="News">
+SELECT
+        k.NewsKeyID,
+        k.TopNewsIndicator,
+        v.CultureCode,
+    v.HeaderText,
+    v.BodyText,
+    v.AuthorName,
+    v.CreateDate
+FROM
+        NewsKey k
+INNER JOIN
+        NewsValue v
+ON      k.NewsKeyID = v.NewsKeyID
+    </createView>
+  </changeSet>
+
+  <changeSet author="roug" id="rev-11">
+    <createView viewName="StringResource" dbms="h2,mssql">
+SELECT
+        tAT_ResourceKey.ResourceType,
+        tAT_ResourceKey.ResourceKey,
+        tAT_ResourceValue.CultureCode,
+    tAT_ResourceValue.ResourceValue
+FROM
+        tAT_ResourceKey
+INNER JOIN
+        tAT_ResourceValue
+ON      tAT_ResourceKey.ResourceKeyID = tAT_ResourceValue.ResourceKeyID
+union
+select
+        ReviseResourceKey.ResourceType,
+        ReviseResourceKey.ResourceKey,
+        ReviseResourceValue.CultureCode,
+    ReviseResourceValue.ResourceValue
+FROM
+        ReviseResourceKey
+INNER JOIN
+        ReviseResourceValue
+ON      ReviseResourceKey.ResourceKeyID = ReviseResourceValue.ResourceKeyID
+    </createView>
   </changeSet>
 
 
