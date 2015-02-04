@@ -319,16 +319,11 @@
         <constraints unique="true"/>
       </column>
       <column name="Name" type="VARCHAR(255)"/>
-      <column name="StartYear" type="INT">
-        <constraints nullable="true"/>
-      </column>
-      <column name="EndYear" type="INT">
-        <constraints nullable="true"/>
-      </column>
-      <column name="ParentID" type="INT">
-        <constraints nullable="true"/>
-      </column>
+      <column name="StartYear" type="INT"/>
+      <column name="EndYear" type="INT"/>
+      <column name="ParentID" type="INT"/>
       <column name="LOV_CountryID" type="INT"/>
+      <column name="Level" type="INT"/>
     </createTable>
   </changeSet>
 
