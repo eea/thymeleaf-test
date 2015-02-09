@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="15"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="22"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="34"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="57"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="58"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="59"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="68"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="73"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="74"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="81"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="84"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="100"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="101"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="106"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="109"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="122"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="127"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="128"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="129"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="137"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="156"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="166"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="177"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="178"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="182"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="197"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="201"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="202"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="207"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="213"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="214"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="1" LOV_CountryID="234"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="2" LOV_CountryID="15"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="2" LOV_CountryID="22"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="2" LOV_CountryID="59"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="2" LOV_CountryID="73"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="2" LOV_CountryID="74"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="2" LOV_CountryID="81"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="2" LOV_CountryID="84"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="2" LOV_CountryID="106"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="2" LOV_CountryID="109"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="2" LOV_CountryID="129"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="2" LOV_CountryID="156"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="2" LOV_CountryID="178"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="2" LOV_CountryID="207"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="2" LOV_CountryID="213"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="2" LOV_CountryID="234"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="3" LOV_CountryID="15"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="3" LOV_CountryID="22"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="3" LOV_CountryID="57"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="3" LOV_CountryID="58"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="3" LOV_CountryID="59"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="3" LOV_CountryID="68"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="3" LOV_CountryID="73"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="3" LOV_CountryID="74"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="3" LOV_CountryID="81"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="3" LOV_CountryID="84"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="3" LOV_CountryID="100"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="3" LOV_CountryID="106"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="3" LOV_CountryID="109"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="3" LOV_CountryID="122"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="3" LOV_CountryID="128"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="3" LOV_CountryID="129"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="3" LOV_CountryID="137"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="3" LOV_CountryID="156"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="3" LOV_CountryID="177"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="3" LOV_CountryID="178"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="3" LOV_CountryID="201"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="3" LOV_CountryID="202"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="3" LOV_CountryID="207"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="3" LOV_CountryID="213"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="3" LOV_CountryID="234"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="4" LOV_CountryID="15"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="4" LOV_CountryID="22"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="4" LOV_CountryID="34"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="4" LOV_CountryID="57"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="4" LOV_CountryID="58"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="4" LOV_CountryID="59"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="4" LOV_CountryID="68"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="4" LOV_CountryID="73"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="4" LOV_CountryID="74"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="4" LOV_CountryID="81"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="4" LOV_CountryID="84"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="4" LOV_CountryID="100"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="4" LOV_CountryID="106"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="4" LOV_CountryID="109"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="4" LOV_CountryID="122"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="4" LOV_CountryID="128"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="4" LOV_CountryID="129"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="4" LOV_CountryID="137"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="4" LOV_CountryID="156"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="4" LOV_CountryID="177"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="4" LOV_CountryID="178"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="4" LOV_CountryID="182"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="4" LOV_CountryID="201"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="4" LOV_CountryID="202"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="4" LOV_CountryID="207"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="4" LOV_CountryID="213"/>
+  <LOV_COUNTRYAREAGROUP LOV_AreaGroupID="4" LOV_CountryID="234"/>
+  <LOV_COUNTRY LOV_CountryID="1" Code="AF" Name="Afghanistan" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="2" Code="AX" Name="&#197;land Islands" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="3" Code="AL" Name="Albania" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="4" Code="DZ" Name="Algeria" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="6" Code="AD" Name="Andorra" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="12" Code="AM" Name="Armenia" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="15" Code="AT" Name="Austria" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="16" Code="AZ" Name="Azerbaijan" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="21" Code="BY" Name="Belarus" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="22" Code="BE" Name="Belgium" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="28" Code="BA" Name="Bosnia and Herzegovina" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="34" Code="BG" Name="Bulgaria" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="53" Code="CR" Name="Costa Rica" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="55" Code="HR" Name="Croatia" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="57" Code="CY" Name="Cyprus" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="58" Code="CZ" Name="Czech Republic" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="59" Code="DK" Name="Denmark" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="64" Code="EG" Name="Egypt" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="68" Code="EE" Name="Estonia" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="71" Code="FO" Name="Faroe Islands" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="73" Code="FI" Name="Finland" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="74" Code="FR" Name="France" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="80" Code="GE" Name="Georgia" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="81" Code="DE" Name="Germany" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="83" Code="GI" Name="Gibraltar" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="84" Code="EL" Name="Greece" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="85" Code="GR" Name="Greece" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="100" Code="HU" Name="Hungary" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="101" Code="IS" Name="Iceland" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="106" Code="IE" Name="Ireland" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="107" Code="IM" Name="Isle Of Man" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="109" Code="IT" Name="Italy" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="122" Code="LV" Name="Latvia" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="127" Code="LI" Name="Liechtenstein" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="128" Code="LT" Name="Lithuania" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="129" Code="LU" Name="Luxembourg" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="131" Code="MK" Name="Macedonia, the Former Yugoslav Republic of" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="145" Code="MD" Name="Moldova, Republic of" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="146" Code="MC" Name="Monaco" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="148" Code="ME" Name="Montenegro" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="156" Code="NL" Name="Netherlands" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="166" Code="NO" Name="Norway" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="177" Code="PL" Name="Poland" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="178" Code="PT" Name="Portugal" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="182" Code="RO" Name="Romania" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="207" Code="ES" Name="Spain" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="213" Code="SE" Name="Sweden" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="214" Code="CH" Name="Switzerland" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="226" Code="TR" Name="Turkey" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="233" Code="GB" Name="United Kingdom" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="234" Code="UK" Name="United Kingdom" StartYear="2001"/>
+  <LOV_COUNTRY LOV_CountryID="249" Code="UNKNOWN" Name="N/A" StartYear="2001"/>
+</dataset>

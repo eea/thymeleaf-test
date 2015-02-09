@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head  th:include="layout :: headerFragment">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title th:text="${title}">Layout template</title>
+    <link rel="stylesheet" type="text/css" href="http://www.eionet.europa.eu/styles/eionet2007/screen.css" media="screen"/>
+    <link href="../../style/app.css" th:href="@{/style/app.css}" rel="stylesheet"/>
+  </head>
+  <body>
+    <div id="container">
+      <div th:include="layout :: bannerFragment">
+        <div id="toolribbon">
+          <div id="lefttools">
+            <a id="skiplink" href="#workarea" accesskey="2">
+              <span>Skip to content</span>
+            </a>
+            <a id="eealink" href="http://www.eea.europa.eu/">EEA</a>
+          </div>
+          <div id="righttools">
+            <a id="loginlink" th:href="@{/loggedin}" href="#">Login</a>
+            <a id="printlink" title="Print this page" href="javascript:this.print();">
+              <span>Print</span>
+            </a>
+            <a id="fullscreenlink" href="javascript:toggleFullScreenMode()" title="Switch to/from full screen mode">
+              <span>Switch to/from full screen mode</span>
+            </a>
+            <a id="acronymlink" href="/acronyms" title="Look up acronyms">
+              <span>Acronyms</span>
+            </a>
+            <a id="rsslink" type="application/rss+xml" href="http://www.eionet.europa.eu/announcements.rdf" title="Eionet headlines as RSS">
+              <span>RSS</span>
+            </a>
+            <form action="http://www.google.com/cse" id="cse-search-box">
+              <div id="freesrchform">
+                <input name="cx" type="hidden" value="010617083146134556574:ymkqzb7sibw"/>
+                <input name="ie" type="hidden" value="UTF-8"/>
+                <input name="sa" type="hidden" value="Search"/>
+                <input id="freesrchfld" type="text" name="q" size="10" onfocus="if(this.value=='Search Eionet')this.value='';" onblur="if(this.value=='')this.value='Search Eionet';" title="Search Eionet" value="Search Eionet"/>
+                <input id="freesrchbtn" type="image" src="http://www.eionet.europa.eu/styles/eionet2007/button_go.gif" alt="Go"/>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- toolribbon -->
+        <div id="pagehead">
+          <a title="Frontpage" th:href="@{/}" href="#">
+            <img src="../../images/eea-print-logo.gif" th:src="@{/images/eea-print-logo.gif}" alt="Logo" id="logo" width="428" height="87"/>
+          </a>
+          <div id="networktitle">E-PRTR</div>
+          <div id="sitetitle">European Environment Information and Observation Network</div>
+          <div id="sitetagline">Networking improving Europe's environment</div>
+        </div>
+        <div id="menuribbon">
+          <ul id="dropdowns" th:include="dropdownmenus :: [/ul]">
+            <li>
+              <a href="http://www.eionet.europa.eu/menuservices">Services</a>
+              <ul>
+                <li>
+                  <a href="http://www.eionet.europa.eu/helpdesk">Helpdesk</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="http://www.eionet.europa.eu/menureportnet">Reportnet</a>
+              <ul>
+                <li>
+                  <a href="http://cdr.eionet.europa.eu/">CDR Repository</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="breadcrumbtrail">
+          <div class="breadcrumbhead">You are here:</div>
+          <div class="breadcrumbitem eionetaccronym">
+            <a href="http://www.eionet.europa.eu">Eionet</a>
+          </div>
+          <th:block th:each="item, itemStat : ${breadcrumbs}">
+            <div class="breadcrumbitem" th:unless="${itemStat.last}">
+              <a href="#" th:href="@{${item.link}}" th:text="${item.linktext}">Middle breadcrumb</a>
+            </div>
+            <div class="breadcrumbitemlast" th:if="${itemStat.last}" th:text="${item.linktext}">Last breadcrumb</div>
+          </th:block>
+          <div class="breadcrumbtail">
+          </div>
+        </div>
+        <div id="leftcolumn">
+          <div class="localnav" th:fragment="menuFragment">
+            <h2>Local navigation</h2>
+            <ul>
+              <li><a href="index.html" th:href="@{/}">Home</a></li>
+              <li><a href="about.html" th:href="@{/about}">About E-PRTR</a></li>
+              <li><a href="#">Search E-PRTR data</a>
+                  <ul>
+                  <li><a href="facilitylevels.html" th:href="@{/facilitylevels}">Facility Level</a></li>
+                  <li><a href="facilities.html" th:href="@{/facilities}">Map Search</a></li>
+                  </ul></li>
+              <li><a href="diffusesourcesapproach.html" th:href="@{/diffusesourcesapproach}">Releases Diffuse Sources</a>
+                  <ul>
+                  <li><a href="diffusesourcesapproach.html" th:href="@{/diffusesourcesapproach}">Approach</a></li>
+                  <li><a href="diffusesourceswater.html" th:href="@{/diffusesourceswater}">Releases to water</a></li>
+                  <li><a href="diffusesourcesair.html" th:href="@{/diffusesourcesair}">Releases to water</a></li>
+                  </ul></li>
+              <li><a href="faq.html" th:href="@{/faq}">Questions to E-PRTR</a></li>
+              <li><a href="users.html" th:href="@{/users}">List users</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="workarea">
+        <h1 th:text="${title}">Page title here</h1>
+<form>
+    <label>Page title: <input type="text" name="pagetitle" size="60" th:text="${pagetitle}"/></label>
+    <textarea name="page" id="page" rows="30" cols="80" th:text="${content}">
+                This is my textarea to be replaced with CKEditor.
+    </textarea>
+    <input type="submit" value="Change"/>
+</form>
+
+      </div>
+      <!-- workarea -->
+    </div>
+    <!-- container -->
+    <div id="pagefoot" th:include="layout :: footerFragment">
+      <p>
+Footer
+</p>
+      <p><a href="/disclaimer">Disclaimer</a>.
+Copyright: <a rel="license" href="http://creativecommons.org/licenses/by/2.5/dk/deed.en_GB" title="Creative Commons Attribution License"><img alt="Creative Commons Attribution License" src="http://i.creativecommons.org/l/by/2.5/dk/80x15.png"/></a>
+</p>
+    </div>
+    <script src="../../scripts/ckeditor/ckeditor.js" th:src="@{/scripts/ckeditor/ckeditor.js}"></script>
+    <script>
+        CKEDITOR.replace( 'page' );
+    </script>
+  </body>
+</html>

@@ -3,9 +3,15 @@ package eea.eprtr.controller;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+import java.io.File;
 import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.junit.Test;
+import org.dbunit.DataSourceDatabaseTester;
+import org.dbunit.IDatabaseTester;
+import org.dbunit.dataset.IDataSet;
+import javax.sql.DataSource;
+import org.dbunit.dataset.xml.FlatXmlDataSetBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -33,9 +39,18 @@ public class SimpleDocControllerTest {
 
     private MockMvc mockMvc;
 
+    @Autowired
+    private DataSource dataSource;
+
+    private IDatabaseTester databaseTester;
+
     @Before
     public void setUp() throws Exception {
         this.mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();
+        databaseTester = new DataSourceDatabaseTester(dataSource);
+        IDataSet dataSet = new FlatXmlDataSetBuilder().build(getClass().getClassLoader().getResourceAsStream("seed-cms.xml"));
+        databaseTester.setDataSet(dataSet);
+        databaseTester.onSetup();
     }
 
     @Test

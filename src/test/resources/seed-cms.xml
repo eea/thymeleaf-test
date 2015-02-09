@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+  <LOV_ContentsGroup
+      LOV_ContentsGroupID="2" Code="STP" Name="Static Pages" StartYear="2007"
+    />
+
+  <ReviseResourceKey
+      ResourceKeyID="3" ResourceKey="AboutPageContent" ResourceType="Static"
+      AllowHTML="true" KeyDescription="" KeyTitle="About E-PRTR"
+      ContentsGroupID="2" CreatedDate="2010-03-17 00:00:00"
+   />
+
+  <ReviseResourceValue
+      ResourceValueID="3" ResourceKeyID="3" CultureCode="en-GB"
+      ResourceValue="About time" ChangedDate="2013-03-17 09:39:01"
+  />
+
+</dataset>

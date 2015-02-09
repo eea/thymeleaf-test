@@ -23,8 +23,7 @@ public class CountryServiceJdbc implements CountryService {
 
     @Override
     public LOV getByName(String name) {
-        String query = "SELECT LOV_CountryID, Name FROM LOV_COUNTRY"
-            + " WHERE Name = ?";
+        String query = "SELECT LOV_CountryID, Name FROM LOV_COUNTRY WHERE Name = ?";
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 
         //using RowMapper anonymous class, we can create a separate RowMapper for reuse
