@@ -651,4 +651,15 @@
       </column>
     </createTable>
   </changeSet>
+  <changeSet author="roug" id="rev-34">
+    <createView viewName="AREAGROUP_REPORTINGCOUNTRY">
+SELECT ROW_NUMBER() OVER(ORDER BY CountryId, GroupId) Id, *
+FROM (
+  SELECT LOV_AreaGroupID as GroupId, null As CountryId, Name FROM LOV_AREAGROUP
+UNION ALL
+  SELECT null As GroupId, LOV_CountryID as CountryId, Name FROM REPORTINGCOUNTRY
+) a
+    </createView>
+  </changeSet>
+
 </databaseChangeLog>
